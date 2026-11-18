@@ -6,8 +6,8 @@ static Movtex bob_movtex_water_data[] = {
     MOV_TEX_4_BOX_TRIS(-4096,  7202),
     MOV_TEX_4_BOX_TRIS( 1984,  7202),
     MOV_TEX_4_BOX_TRIS( 1984, -5276),
-    MOV_TEX_ROT(     ROTATE_COUNTER_CLOCKWISE),
-    MOV_TEX_ALPHA(    0x78),
+    MOV_TEX_ROT(     ROTATE_CLOCKWISE),
+    MOV_TEX_ALPHA(   0x78),
     MOV_TEX_DEFINE(  TEXTURE_WATER),
     MOV_TEX_END(),
 };
