@@ -37,7 +37,7 @@ static const LevelScript script_func_local_5[] = {
 const LevelScript level_thi_entry[] = {
     INIT_LEVEL(),
     LOAD_MIO0        (/*seg*/ 0x07, _thi_segment_7SegmentRomStart, _thi_segment_7SegmentRomEnd),
-    LOAD_MIO0_TEXTURE(/*seg*/ 0x09, _grass_mio0SegmentRomStart, _grass_mio0SegmentRomEnd),
+    LOAD_MIO0_TEXTURE(/*seg*/ 0x09, _generic_mio0SegmentRomStart, _generic_mio0SegmentRomEnd),
     LOAD_MIO0        (/*seg*/ 0x0A, _bbh_skybox_mio0SegmentRomStart, _bbh_skybox_mio0SegmentRomEnd),
     //LOAD_MIO0        (/*seg*/ 0x05, _group11_mio0SegmentRomStart, _group11_mio0SegmentRomEnd),
     //LOAD_RAW         (/*seg*/ 0x0C, _group11_geoSegmentRomStart,  _group11_geoSegmentRomEnd),
@@ -57,7 +57,7 @@ const LevelScript level_thi_entry[] = {
     LOAD_MODEL_FROM_GEO(MODEL_THI_HUGE_ISLAND_TOP, thi_geo_0005B0),
     LOAD_MODEL_FROM_GEO(MODEL_THI_TINY_ISLAND_TOP, thi_geo_0005C8),
 
-    AREA(/*index*/ 1, thi_geo_000608),
+    AREA(/*index*/ 1, big_world_area_1_geo),
         OBJECT(/*model*/ MODEL_NONE, /*pos*/ -7372, -1969,  7373, /*angle*/ 0, 149, 0, /*bhvParam*/ BPARAM2(WARP_NODE_0A), /*bhv*/ bhvSpinAirborneWarp),
         OBJECT(/*model*/ MODEL_NONE, /*pos*/   410,  -512,   922, /*angle*/ 0,   0, 0, /*bhvParam*/ BPARAM2(WARP_NODE_0B), /*bhv*/ bhvInstantActiveWarp),
         OBJECT(/*model*/ MODEL_NONE, /*pos*/   410,  -512,   717, /*angle*/ 0,   0, 0, /*bhvParam*/ BPARAM1(5)  | BPARAM2(WARP_NODE_0C), /*bhv*/ bhvWarp),
@@ -77,7 +77,7 @@ const LevelScript level_thi_entry[] = {
         TERRAIN_TYPE(/*terrainType*/ TERRAIN_GRASS),
     END_AREA(),
     
-    AREA(/*index*/ 2, thi_geo_00079C),
+    AREA(/*index*/ 2, big_world_area_2_geo),
         OBJECT(/*model*/ MODEL_NONE, /*pos*/ 4506, 857, 4373, /*angle*/ 0, -90, 0, /*bhvParam*/ BPARAM2(WARP_NODE_0A), /*bhv*/ bhvInstantActiveWarp),
         OBJECT(/*model*/ MODEL_NONE, /*pos*/ 4730, 857, 4373, /*angle*/ 0,   0, 0, /*bhvParam*/ BPARAM1(5) | BPARAM2(WARP_NODE_0C), /*bhv*/ bhvWarp),
         WARP_NODE(/*id*/ WARP_NODE_0A,      /*destLevel*/ LEVEL_THI,    /*destArea*/ 2, /*destNode*/ WARP_NODE_0A, /*flags*/ WARP_NO_CHECKPOINT),

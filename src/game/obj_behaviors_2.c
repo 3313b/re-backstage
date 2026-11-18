@@ -20,6 +20,7 @@
 #include "level_update.h"
 #include "levels/ccm/header.h"
 #include "levels/lll/header.h"
+#include "levels/bob/header.h"
 #include "mario.h"
 #include "mario_actions_cutscene.h"
 #include "memory.h"
@@ -181,4 +182,42 @@ static void treat_far_home_as_mario(f32 threshold) {
     }
 }
 
+static s32 clamp_f32(f32 *value, f32 minimum, f32 maximum) {
+    if (*value <= minimum) {
+        *value = minimum;
+    } else if (*value >= maximum) {
+        *value = maximum;
+    } else {
+        return FALSE;
+    }
+
+    return TRUE;
+}
+
+static s32 oscillate_toward(s32 *value, f32 *vel, s32 target, f32 velCloseToZero, f32 accel,
+                            f32 slowdown) {
+    s32 startValue = *value;
+    *value += (s32) *vel;
+
+    if (*value == target
+        || ((*value - target) * (startValue - target) < 0 && *vel > -velCloseToZero
+            && *vel < velCloseToZero)) {
+        *value = target;
+        *vel = 0.0f;
+        return TRUE;
+    } else {
+        if (*value >= target) {
+            accel = -accel;
+        }
+        if (*vel * accel < 0.0f) {
+            accel *= slowdown;
+        }
+
+        *vel += accel;
+    }
+
+    return FALSE;
+}
+
 #include "behaviors/triplet_butterfly.inc.c" // pathfly.c
+#include "behaviors/seesaw_platform.inc.c"

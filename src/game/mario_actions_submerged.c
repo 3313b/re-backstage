@@ -293,7 +293,9 @@ static void common_idle_step(struct MarioState *m, s32 animation, s32 arg) {
     }
     set_mario_animation(m, animation);
 
+    #ifdef POWBUILD
     set_swimming_at_surface_particles(m, PARTICLE_IDLE_WATER_WAVE);
+    #endif
 }
 
 // Placed sooner so it can be used when B is pressed

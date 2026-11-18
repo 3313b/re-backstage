@@ -10,17 +10,17 @@ extern const GeoLayout tumbling_platform_near_geo[];
 extern const GeoLayout haunted_bookshelf_geo[];
 
 // leveldata
-extern const Gfx bbh_dl_01_mesh[];
-extern const Gfx bbh_dl_02_mesh[];
-extern const Gfx bbh_dl_03_mesh[];
-extern const Gfx bbh_dl_04_mesh[];
-extern const Gfx bbh_dl_05_mesh[];
-extern const Gfx bbh_dl_06_mesh[];
-extern const Gfx bbh_dl_07_mesh[];
-extern const Gfx bbh_dl_08_mesh[];
-extern const Gfx bbh_dl_09_mesh[];
-extern const Gfx bbh_dl_10_mesh[];
-extern const Gfx bbh_dl_11_mesh[];
+extern const Gfx teresa_obake_01_dl_mesh[];
+extern const Gfx teresa_obake_02_dl_mesh[];
+extern const Gfx teresa_obake_03_dl_mesh[];
+extern const Gfx teresa_obake_04_dl_mesh[];
+extern const Gfx teresa_obake_dl_05_mesh[];
+extern const Gfx teresa_obake_06_dl_mesh[];
+extern const Gfx teresa_obake_07_dl_mesh[];
+extern const Gfx teresa_obake_08_dl_mesh[];
+extern const Gfx teresa_obake_09_dl_mesh[];
+extern const Gfx teresa_obake_10_dl_mesh[];
+extern const Gfx teresa_obake_11_dl_mesh[];
 extern const Gfx tumbling_platform_far_dl[];
 extern const Gfx tumbling_platform_near_dl[];
 extern const Gfx bbh_haunted_bookshelf_dl[];

@@ -17,6 +17,7 @@
 #include "levels/ccm/header.h"
 #include "levels/ddd/header.h"
 #include "levels/thi/header.h"
+#include "levels/bob/header.h"
 
 // Areamap status
 #define STATUS_HIDDEN 0
@@ -27,7 +28,8 @@
 // Pointers placed in a similar order to messnum.h
 struct AreaMapData *sAreaMapPtrs[] = {
     &castle_grounds_areamap, &courtyard_areamap,         &mountain_areamap,          &fire_bubble_areamap,
-    &snow_slider_areamap,    &water_land_area_1_areamap, &water_land_area_2_areamap, &tiny_huge_island_areamap, NULL,
+    &snow_slider_areamap,    &water_land_area_1_areamap, &water_land_area_2_areamap, &big_world_areamap, 
+    &battle_field_areamap, NULL,
 };
 
 // Initial positions and status (hidden)

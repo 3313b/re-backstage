@@ -17,8 +17,6 @@
 #include "levels/bbh/header.h"
 
 static const LevelScript script_func_local_1[] = {
-    //OBJECT(/*model*/ MODEL_BBH_TUMBLING_PLATFORM,      /*pos*/  2961,     0,  -768, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvBBHTumblingBridge),
-    //OBJECT(/*model*/ MODEL_BBH_MOVING_BOOKSHELF,       /*pos*/ -1994,   819,   213, /*angle*/ 0, 0, 0,   /*bhvParam*/ 0, /*bhv*/ bhvHauntedBookshelf),
     OBJECT(/*model*/ MODEL_MR_I, /*pos*/ 3150, 0, 1688, 0, 90, 0, /*bhvParam*/ 0x00000000, /*bhv*/ bhvMrI),
     OBJECT(/*model*/ MODEL_MR_I, /*pos*/ 3342, 0, 1332, 0, 90, 0, /*bhvParam*/ 0x00000000, /*bhv*/ bhvMrI),
     OBJECT(/*model*/ MODEL_MR_I, /*pos*/ 3522, 0, 1510, 0, -125, 0, /*bhvParam*/ 0x00000000, /*bhv*/ bhvMrI),

@@ -29,6 +29,7 @@
 #include "save_file.h"
 #include "spawn_object.h"
 #include "spawn_sound.h"
+#include "levels/bob/header.h"
 
 /**
  * @file obj_behaviors.c

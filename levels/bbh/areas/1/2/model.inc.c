@@ -1,4 +1,4 @@
-Vtx bbh_dl_02_vtx_0[31] = {
+Vtx teresa_obake_02_dl_vtx_0[31] = {
 	{{ {1126, 922, 389}, 0, {-4054, 990}, {0, 0, 127, 255} }},
 	{{ {1638, 1024, 389}, 0, {1053, 0}, {0, 0, 127, 255} }},
 	{{ {1126, 1024, 389}, 0, {-4054, 0}, {0, 0, 127, 255} }},
@@ -32,8 +32,8 @@ Vtx bbh_dl_02_vtx_0[31] = {
 	{{ {1638, 1024, 799}, 0, {-80, 0}, {0, 0, 127, 255} }},
 };
 
-Gfx bbh_dl_02_mesh_tri_0[] = {
-	gsSPVertex(bbh_dl_02_vtx_0 + 0, 16, 0),
+Gfx teresa_obake_02_dl_mesh_tri_0[] = {
+	gsSPVertex(teresa_obake_02_dl_vtx_0 + 0, 16, 0),
 	gsSP1Triangle(0, 1, 2, 0),
 	gsSP1Triangle(0, 3, 4, 0),
 	gsSP1Triangle(5, 6, 7, 0),
@@ -41,7 +41,7 @@ Gfx bbh_dl_02_mesh_tri_0[] = {
 	gsSP1Triangle(9, 10, 11, 0),
 	gsSP1Triangle(9, 11, 12, 0),
 	gsSP1Triangle(13, 14, 15, 0),
-	gsSPVertex(bbh_dl_02_vtx_0 + 16, 15, 0),
+	gsSPVertex(teresa_obake_02_dl_vtx_0 + 16, 15, 0),
 	gsSP1Triangle(0, 1, 2, 0),
 	gsSP1Triangle(3, 4, 5, 0),
 	gsSP1Triangle(3, 5, 6, 0),
@@ -52,9 +52,9 @@ Gfx bbh_dl_02_mesh_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx bbh_dl_02_mesh[] = {
+Gfx teresa_obake_02_dl_mesh[] = {
 	gsSPDisplayList(mat_teresa_obake_OrangeFenceMaterial),
-	gsSPDisplayList(bbh_dl_02_mesh_tri_0),
+	gsSPDisplayList(teresa_obake_02_dl_mesh_tri_0),
 	gsDPPipeSync(),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPClearGeometryMode(G_TEXTURE_GEN),

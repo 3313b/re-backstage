@@ -20,7 +20,7 @@
 #define BORDER_HEIGHT 0
 
 // Default is power build, uncomment to build pow
-// #define POWBUILD
+#define POWBUILD
 
 // Debug Build
 #define DEBUG

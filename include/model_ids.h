@@ -59,7 +59,7 @@
 // Level model IDs
 
 // bbh
-#define MODEL_BBH_TILTING_FLOOR_PLATFORM       0x35        // RCP_Ana
+#define MODEL_BBH_TILTING_FLOOR_PLATFORM       0x35        // RCP_HmsAna
 #define MODEL_BBH_TUMBLING_PLATFORM            0x36        // tumbling_platform_far_geo
 #define MODEL_BBH_TUMBLING_PLATFORM_PART       0x37        // tumbling_platform_near_geo
 #define MODEL_BBH_MOVING_BOOKSHELF             0x38        // haunted_bookshelf_geo

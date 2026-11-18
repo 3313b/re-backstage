@@ -9,9 +9,9 @@
 extern const GeoLayout thi_geo_0005B0[];
 extern const GeoLayout thi_geo_0005C8[];
 extern const GeoLayout thi_geo_0005F0[];
-extern const GeoLayout thi_geo_000608[];
+extern const GeoLayout big_world_area_1_geo[];
 extern const GeoLayout thi_geo_0006D4[];
-extern const GeoLayout thi_geo_00079C[];
+extern const GeoLayout big_world_area_2_geo[];
 
 // leveldata
 extern const Gfx big_world_1_dl_mesh[];
@@ -22,7 +22,7 @@ extern const Gfx big_world_5_dl_mesh[];
 extern const Gfx thi_seg7_dl_07007538[];
 extern const Gfx thi_seg7_dl_07007648[];
 extern const Gfx thi_seg7_dl_07007930[];
-extern const Gfx thi_seg7_dl_07007C20[];
+extern const Gfx big_world_area_2_1_dl_mesh[];
 extern const Gfx thi_seg7_dl_07009670[];
 extern const Gfx thi_seg7_dl_07009D50[];
 extern const Gfx thi_seg7_dl_07009F58[];
@@ -34,7 +34,7 @@ extern const Collision thi_seg7_collision_top_trap[];
 extern const Trajectory thi_seg7_trajectory_koopa[];
 extern const struct MovtexQuadCollection thi_movtex_area1_water[];
 extern const struct MovtexQuadCollection thi_movtex_area2_water[];
-extern struct AreaMapData tiny_huge_island_areamap;
+extern struct AreaMapData big_world_areamap;
 
 // script
 extern const LevelScript level_thi_entry[];

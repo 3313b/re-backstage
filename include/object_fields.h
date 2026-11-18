@@ -370,6 +370,9 @@
 #define /*0x0F8*/ oLLLRotatingHexFlameUnkF8 OBJECT_FIELD_F32(0x1C)
 #define /*0x0FC*/ oLLLRotatingHexFlameUnkFC OBJECT_FIELD_F32(0x1D)
 
+/* Seesaw Platform */
+#define /*0x0F4*/ oSeesawPlatformPitchVel OBJECT_FIELD_F32(0x1B)
+
 /* WF Sliding Brick Platform */
 #define /*0x0F4*/ oWFSlidBrickPtfmMovVel OBJECT_FIELD_F32(0x1B)
 

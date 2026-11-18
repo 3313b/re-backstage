@@ -303,6 +303,12 @@
     #define BETA_CHEST_ACT_OPENING     1
     #define BETA_CHEST_ACT_IDLE_OPEN   2
 
+/* BBH Tilting Trap Platform */
+    /* oAction */
+    // Unused in original Japanese version
+    #define BBH_TILTING_TRAP_PLATFORM_ACT_MARIO_ON  0
+    #define BBH_TILTING_TRAP_PLATFORM_ACT_MARIO_OFF 1
+
 /* Boo */
     /* oBooDeathStatus */
     #define BOO_DEATH_STATUS_ALIVE 0

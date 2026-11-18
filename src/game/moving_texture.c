@@ -310,6 +310,7 @@ extern u8 ddd_movtex_area2_water[];
 extern u8 wf_movtex_water[];
 extern u8 castle_courtyard_movtex_star_statue_water[];
 extern u8 thi_movtex_area1_water[];
+extern u8 bob_movtex_water[];
 
 /**
  * Find the quadCollection for a given quad collection id.
@@ -328,6 +329,8 @@ void *get_quad_collection_from_id(u32 id) { // WaterGetDataPtr
             return castle_courtyard_movtex_star_statue_water;
         case THI_MOVTEX_AREA1_WATER:
             return thi_movtex_area1_water;
+        case BOB_MOVTEX_WATER:
+            return bob_movtex_water;
         default:
             return NULL;
     }

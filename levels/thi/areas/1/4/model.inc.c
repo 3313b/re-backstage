@@ -1,7 +1,3 @@
-Lights1 big_world_f3dlite_material_026_lights = gdSPDefLights1(
-	0x7F, 0x7F, 0x3C,
-	0xFF, 0xFF, 0x78, 0x28, 0x28, 0x28);
-
 Vtx big_world_4_dl_mesh_vtx_0[27] = {
 	{{ {-8191, -3583, -8191}, 0, {1502, 990}, {0, 127, 0, 255} }},
 	{{ {-5119, -3583, -4607}, 0, {0, 96}, {0, 127, 0, 255} }},
@@ -51,31 +47,10 @@ Gfx big_world_4_dl_mesh_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_big_world_f3dlite_material_026[] = {
-	gsSPSetLights1(big_world_f3dlite_material_026_lights),
-	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, SHADE, 0, TEXEL0, 0, SHADE, 0, TEXEL0, 0, SHADE, 0),
-	gsDPSetAlphaDither(G_AD_NOISE),
-	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_16b_LOAD_BLOCK, 1, grass_0900B800),
-	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 1023, 256),
-	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
-	gsDPSetTileSize(0, 0, 0, 124, 124),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_revert_big_world_f3dlite_material_026[] = {
-	gsDPPipeSync(),
-	gsDPSetAlphaDither(G_AD_DISABLE),
-	gsSPEndDisplayList(),
-};
-
 // 0x070072E8 - 0x07007348
 Gfx big_world_4_dl_mesh[] = {
-	gsSPDisplayList(mat_big_world_f3dlite_material_026),
+	gsSPDisplayList(mat_big_world_SandFadeMaterial),
 	gsSPDisplayList(big_world_4_dl_mesh_tri_0),
-	gsSPDisplayList(mat_revert_big_world_f3dlite_material_026),
 	gsDPPipeSync(),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPClearGeometryMode(G_TEXTURE_GEN),
@@ -83,4 +58,3 @@ Gfx big_world_4_dl_mesh[] = {
 	gsSPTexture(65535, 65535, 0, 0, 0),
 	gsSPEndDisplayList(),
 };
-

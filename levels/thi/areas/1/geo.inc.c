@@ -1,5 +1,5 @@
 // 0x0E000608
-const GeoLayout thi_geo_000608[] = {
+const GeoLayout big_world_area_1_geo[] = {
     GEO_NODE_SCREEN_AREA(10, SCREEN_WIDTH/2, SCREEN_HEIGHT/2, SCREEN_WIDTH/2, SCREEN_HEIGHT/2),
     GEO_OPEN_NODE(),
         GEO_ZBUFFER(0),

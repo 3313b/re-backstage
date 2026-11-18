@@ -10,7 +10,10 @@
 #include "game/areamap.h"
 
 #include "make_const_nonconst.h"
+
 #include "levels/thi/texture.inc.c"
+#include "levels/thi/material.inc.c"
+
 #include "levels/thi/areas/1/1/model.inc.c" // Area 2 defines a share path to load these DLs as part of its geo script.
 #include "levels/thi/areas/1/2/model.inc.c"
 #include "levels/thi/areas/1/3/model.inc.c"

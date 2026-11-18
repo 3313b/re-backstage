@@ -1,4 +1,4 @@
-Vtx bbh_dl_03_vtx_0[194] = {
+Vtx teresa_obake_03_dl_vtx_0[194] = {
 	{{ {-2253, 0, 1126}, 0, {-5136, 3903}, {0, 0, 127, 255} }},
 	{{ {-2458, 870, 1126}, 0, {-6239, -784}, {0, 0, 127, 255} }},
 	{{ {-2458, 0, 1126}, 0, {-6239, 3903}, {0, 0, 127, 255} }},
@@ -195,68 +195,68 @@ Vtx bbh_dl_03_vtx_0[194] = {
 	{{ {-102, 256, 1382}, 0, {6443, 2524}, {0, 0, 127, 255} }},
 };
 
-Gfx bbh_dl_03_mesh_tri_0[] = {
-	gsSPVertex(bbh_dl_03_vtx_0 + 0, 15, 0),
+Gfx teresa_obake_03_dl_mesh_tri_0[] = {
+	gsSPVertex(teresa_obake_03_dl_vtx_0 + 0, 15, 0),
 	gsSP1Triangle(0, 1, 2, 0),
 	gsSP1Triangle(3, 4, 5, 0),
 	gsSP1Triangle(6, 7, 8, 0),
 	gsSP1Triangle(9, 10, 11, 0),
 	gsSP1Triangle(12, 13, 14, 0),
-	gsSPVertex(bbh_dl_03_vtx_0 + 15, 15, 0),
+	gsSPVertex(teresa_obake_03_dl_vtx_0 + 15, 15, 0),
 	gsSP1Triangle(0, 1, 2, 0),
 	gsSP1Triangle(3, 4, 5, 0),
 	gsSP1Triangle(6, 7, 8, 0),
 	gsSP1Triangle(9, 10, 11, 0),
 	gsSP1Triangle(12, 13, 14, 0),
-	gsSPVertex(bbh_dl_03_vtx_0 + 30, 15, 0),
+	gsSPVertex(teresa_obake_03_dl_vtx_0 + 30, 15, 0),
 	gsSP1Triangle(0, 1, 2, 0),
 	gsSP1Triangle(3, 4, 5, 0),
 	gsSP1Triangle(6, 7, 8, 0),
 	gsSP1Triangle(9, 10, 11, 0),
 	gsSP1Triangle(12, 13, 14, 0),
-	gsSPVertex(bbh_dl_03_vtx_0 + 45, 15, 0),
+	gsSPVertex(teresa_obake_03_dl_vtx_0 + 45, 15, 0),
 	gsSP1Triangle(0, 1, 2, 0),
 	gsSP1Triangle(3, 4, 5, 0),
 	gsSP1Triangle(6, 7, 8, 0),
 	gsSP1Triangle(9, 10, 11, 0),
 	gsSP1Triangle(12, 13, 14, 0),
-	gsSPVertex(bbh_dl_03_vtx_0 + 60, 15, 0),
+	gsSPVertex(teresa_obake_03_dl_vtx_0 + 60, 15, 0),
 	gsSP1Triangle(0, 1, 2, 0),
 	gsSP1Triangle(3, 4, 5, 0),
 	gsSP1Triangle(6, 7, 8, 0),
 	gsSP1Triangle(9, 10, 11, 0),
 	gsSP1Triangle(12, 13, 14, 0),
-	gsSPVertex(bbh_dl_03_vtx_0 + 75, 14, 0),
+	gsSPVertex(teresa_obake_03_dl_vtx_0 + 75, 14, 0),
 	gsSP1Triangle(0, 1, 2, 0),
 	gsSP1Triangle(3, 4, 5, 0),
 	gsSP1Triangle(6, 7, 8, 0),
 	gsSP1Triangle(9, 10, 11, 0),
 	gsSP1Triangle(12, 13, 9, 0),
-	gsSPVertex(bbh_dl_03_vtx_0 + 89, 15, 0),
+	gsSPVertex(teresa_obake_03_dl_vtx_0 + 89, 15, 0),
 	gsSP1Triangle(0, 1, 2, 0),
 	gsSP1Triangle(3, 4, 5, 0),
 	gsSP1Triangle(6, 7, 8, 0),
 	gsSP1Triangle(9, 10, 11, 0),
 	gsSP1Triangle(12, 13, 14, 0),
-	gsSPVertex(bbh_dl_03_vtx_0 + 104, 15, 0),
+	gsSPVertex(teresa_obake_03_dl_vtx_0 + 104, 15, 0),
 	gsSP1Triangle(0, 1, 2, 0),
 	gsSP1Triangle(3, 4, 5, 0),
 	gsSP1Triangle(6, 7, 8, 0),
 	gsSP1Triangle(9, 10, 11, 0),
 	gsSP1Triangle(12, 13, 14, 0),
-	gsSPVertex(bbh_dl_03_vtx_0 + 119, 14, 0),
+	gsSPVertex(teresa_obake_03_dl_vtx_0 + 119, 14, 0),
 	gsSP1Triangle(0, 1, 2, 0),
 	gsSP1Triangle(3, 4, 5, 0),
 	gsSP1Triangle(2, 6, 7, 0),
 	gsSP1Triangle(8, 9, 10, 0),
 	gsSP1Triangle(11, 12, 13, 0),
-	gsSPVertex(bbh_dl_03_vtx_0 + 133, 14, 0),
+	gsSPVertex(teresa_obake_03_dl_vtx_0 + 133, 14, 0),
 	gsSP1Triangle(0, 1, 2, 0),
 	gsSP1Triangle(3, 4, 5, 0),
 	gsSP1Triangle(6, 7, 8, 0),
 	gsSP1Triangle(6, 9, 10, 0),
 	gsSP1Triangle(11, 12, 13, 0),
-	gsSPVertex(bbh_dl_03_vtx_0 + 147, 16, 0),
+	gsSPVertex(teresa_obake_03_dl_vtx_0 + 147, 16, 0),
 	gsSP1Triangle(0, 1, 2, 0),
 	gsSP1Triangle(3, 4, 5, 0),
 	gsSP1Triangle(6, 7, 8, 0),
@@ -264,7 +264,7 @@ Gfx bbh_dl_03_mesh_tri_0[] = {
 	gsSP1Triangle(10, 11, 7, 0),
 	gsSP1Triangle(11, 10, 12, 0),
 	gsSP1Triangle(13, 14, 15, 0),
-	gsSPVertex(bbh_dl_03_vtx_0 + 163, 15, 0),
+	gsSPVertex(teresa_obake_03_dl_vtx_0 + 163, 15, 0),
 	gsSP1Triangle(0, 1, 2, 0),
 	gsSP1Triangle(3, 4, 5, 0),
 	gsSP1Triangle(4, 3, 6, 0),
@@ -272,7 +272,7 @@ Gfx bbh_dl_03_mesh_tri_0[] = {
 	gsSP1Triangle(7, 9, 10, 0),
 	gsSP1Triangle(11, 12, 13, 0),
 	gsSP1Triangle(11, 13, 14, 0),
-	gsSPVertex(bbh_dl_03_vtx_0 + 178, 16, 0),
+	gsSPVertex(teresa_obake_03_dl_vtx_0 + 178, 16, 0),
 	gsSP1Triangle(0, 1, 2, 0),
 	gsSP1Triangle(0, 2, 3, 0),
 	gsSP1Triangle(4, 5, 6, 0),
@@ -284,7 +284,7 @@ Gfx bbh_dl_03_mesh_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx bbh_dl_03_vtx_1[47] = {
+Vtx teresa_obake_03_dl_vtx_1[47] = {
 	{{ {-1843, 1075, 1126}, 0, {-5138, 3070}, {0, 127, 0, 255} }},
 	{{ {-2458, 1075, 1126}, 0, {-5138, 9198}, {0, 127, 0, 255} }},
 	{{ {-2458, 1075, 2330}, 0, {6863, 9203}, {0, 127, 0, 255} }},
@@ -334,15 +334,15 @@ Vtx bbh_dl_03_vtx_1[47] = {
 	{{ {-51, 0, 1536}, 0, {-1052, -14803}, {0, 127, 0, 255} }},
 };
 
-Gfx bbh_dl_03_mesh_tri_1[] = {
-	gsSPVertex(bbh_dl_03_vtx_1 + 0, 16, 0),
+Gfx teresa_obake_03_dl_mesh_tri_1[] = {
+	gsSPVertex(teresa_obake_03_dl_vtx_1 + 0, 16, 0),
 	gsSP1Triangle(0, 1, 2, 0),
 	gsSP1Triangle(3, 4, 5, 0),
 	gsSP1Triangle(6, 7, 8, 0),
 	gsSP1Triangle(9, 10, 11, 0),
 	gsSP1Triangle(9, 11, 12, 0),
 	gsSP1Triangle(13, 14, 15, 0),
-	gsSPVertex(bbh_dl_03_vtx_1 + 16, 15, 0),
+	gsSPVertex(teresa_obake_03_dl_vtx_1 + 16, 15, 0),
 	gsSP1Triangle(0, 1, 2, 0),
 	gsSP1Triangle(3, 4, 5, 0),
 	gsSP1Triangle(5, 6, 3, 0),
@@ -350,7 +350,7 @@ Gfx bbh_dl_03_mesh_tri_1[] = {
 	gsSP1Triangle(7, 10, 8, 0),
 	gsSP1Triangle(11, 12, 13, 0),
 	gsSP1Triangle(11, 14, 12, 0),
-	gsSPVertex(bbh_dl_03_vtx_1 + 31, 16, 0),
+	gsSPVertex(teresa_obake_03_dl_vtx_1 + 31, 16, 0),
 	gsSP1Triangle(0, 1, 2, 0),
 	gsSP1Triangle(0, 3, 1, 0),
 	gsSP1Triangle(4, 5, 6, 0),
@@ -362,7 +362,7 @@ Gfx bbh_dl_03_mesh_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx bbh_dl_03_vtx_2[30] = {
+Vtx teresa_obake_03_dl_vtx_2[30] = {
 	{{ {-1331, 819, 1638}, 0, {5070, 990}, {177, 0, 99, 255} }},
 	{{ {-819, 922, 2048}, 0, {-1268, 0}, {177, 0, 99, 255} }},
 	{{ {-1331, 922, 1638}, 0, {5070, 0}, {177, 0, 99, 255} }},
@@ -395,14 +395,14 @@ Vtx bbh_dl_03_vtx_2[30] = {
 	{{ {-1843, 870, 2150}, 0, {2589, 495}, {60, 0, 112, 255} }},
 };
 
-Gfx bbh_dl_03_mesh_tri_2[] = {
-	gsSPVertex(bbh_dl_03_vtx_2 + 0, 15, 0),
+Gfx teresa_obake_03_dl_mesh_tri_2[] = {
+	gsSPVertex(teresa_obake_03_dl_vtx_2 + 0, 15, 0),
 	gsSP1Triangle(0, 1, 2, 0),
 	gsSP1Triangle(3, 4, 5, 0),
 	gsSP1Triangle(6, 7, 8, 0),
 	gsSP1Triangle(9, 10, 11, 0),
 	gsSP1Triangle(12, 13, 14, 0),
-	gsSPVertex(bbh_dl_03_vtx_2 + 15, 15, 0),
+	gsSPVertex(teresa_obake_03_dl_vtx_2 + 15, 15, 0),
 	gsSP1Triangle(0, 1, 2, 0),
 	gsSP1Triangle(3, 4, 5, 0),
 	gsSP1Triangle(6, 7, 8, 0),
@@ -411,29 +411,29 @@ Gfx bbh_dl_03_mesh_tri_2[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx bbh_dl_03_vtx_3[4] = {
+Vtx teresa_obake_03_dl_vtx_3[4] = {
 	{{ {-384, 0, 2483}, 0, {8570, 3676}, {0, 127, 0, 255} }},
 	{{ {-2176, 0, 1408}, 0, {-6013, -5074}, {0, 127, 0, 255} }},
 	{{ {-2176, 0, 2483}, 0, {-6013, 3676}, {0, 127, 0, 255} }},
 	{{ {-384, 0, 1408}, 0, {8570, -5074}, {0, 127, 0, 255} }},
 };
 
-Gfx bbh_dl_03_mesh_tri_3[] = {
-	gsSPVertex(bbh_dl_03_vtx_3 + 0, 4, 0),
+Gfx teresa_obake_03_dl_mesh_tri_3[] = {
+	gsSPVertex(teresa_obake_03_dl_vtx_3 + 0, 4, 0),
 	gsSP1Triangle(0, 1, 2, 0),
 	gsSP1Triangle(1, 0, 3, 0),
 	gsSPEndDisplayList(),
 };
 
-Gfx bbh_dl_03_mesh[] = {
+Gfx teresa_obake_03_dl_mesh[] = {
 	gsSPDisplayList(mat_teresa_obake_DarkWallMaterial),
-	gsSPDisplayList(bbh_dl_03_mesh_tri_0),
+	gsSPDisplayList(teresa_obake_03_dl_mesh_tri_0),
 	gsSPDisplayList(mat_teresa_obake_DarkWoodPlankMaterial),
-	gsSPDisplayList(bbh_dl_03_mesh_tri_1),
+	gsSPDisplayList(teresa_obake_03_dl_mesh_tri_1),
 	gsSPDisplayList(mat_teresa_obake_RoughBrickMaterial),
-	gsSPDisplayList(bbh_dl_03_mesh_tri_2),
+	gsSPDisplayList(teresa_obake_03_dl_mesh_tri_2),
 	gsSPDisplayList(mat_teresa_obake_RedCarpetMaterial),
-	gsSPDisplayList(bbh_dl_03_mesh_tri_3),
+	gsSPDisplayList(teresa_obake_03_dl_mesh_tri_3),
 	gsDPPipeSync(),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPClearGeometryMode(G_TEXTURE_GEN),

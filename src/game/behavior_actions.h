@@ -126,6 +126,9 @@ void bhv_volcano_flames_loop(void);
 void bhv_lll_rotating_hexagonal_ring_loop(void);
 void bhv_lll_sinking_rectangular_platform_loop(void);
 void bhv_lll_sinking_square_platforms_loop(void);
+// TODO: find behavior name for seesaw
+void bhv_seesaw_platform_init(void);
+void bhv_seesaw_platform_update(void);
 void bhv_platform_normals_init(void);
 void bhv_tilting_inverted_pyramid_loop(void);
 // pathobake.p
@@ -134,6 +137,7 @@ void bhv_boo_loop(void);
 // pathobakecoin.p
 void bhv_coin_inside_boo_loop(void);
 // pathteretrap.p
+void bhv_bbh_tilting_trap_platform_loop(void);
 void bhv_haunted_bookshelf_loop(void);
 // pathpakun.p
 s32 mario_moving_fast_enough_to_make_piranha_plant_bite(void);

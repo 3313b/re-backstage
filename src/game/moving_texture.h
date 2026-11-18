@@ -34,6 +34,7 @@ struct MovtexQuadCollection {
 #define MOVTEX_AREA_WF               (0x24 << 8)
 #define MOVTEX_AREA_CASTLE_COURTYARD (0x26 << 8)
 #define MOVTEX_AREA_THI              (0x13 << 8)
+#define MOVTEX_AREA_BOB              (0x15 << 8)
 
 // Quad collections
 #define CASTLE_GROUNDS_MOVTEX_WATER                 (   1 | MOVTEX_AREA_CASTLE_GROUNDS)
@@ -43,6 +44,7 @@ struct MovtexQuadCollection {
 #define CASTLE_COURTYARD_MOVTEX_STAR_STATUE_WATER   (   1 | MOVTEX_AREA_CASTLE_COURTYARD)
 #define TTM_MOVTEX_PUDDLE                           (   1 | MOVTEX_AREA_TTM)
 #define THI_MOVTEX_AREA1_WATER                      (   1 | MOVTEX_AREA_THI)
+#define BOB_MOVTEX_WATER                            (   1 | MOVTEX_AREA_BOB)
 
 // Non-colored, unique movtex meshes (drawn in level geo)
 #define MOVTEX_CASTLE_WATERFALL           (1 | MOVTEX_AREA_CASTLE_GROUNDS)

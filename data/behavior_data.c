@@ -34,6 +34,7 @@
 #include "levels/ccm/header.h"
 #include "levels/thi/header.h"
 #include "levels/bbh/header.h"
+#include "levels/bob/header.h"
 
 #include "make_const_nonconst.h"
 #include "behavior_data.h"
@@ -822,6 +823,16 @@ const BehaviorScript bhvLLLTumblingBridge[] = {
     END_LOOP(),
 };
 
+const BehaviorScript bhvSeesawPlatform[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, (OBJ_FLAG_COMPUTE_ANGLE_TO_MARIO | OBJ_FLAG_COMPUTE_DIST_TO_MARIO | OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    CALL_NATIVE(bhv_seesaw_platform_init),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_seesaw_platform_update),
+        CALL_NATIVE(load_object_collision_model),
+    END_LOOP(),
+};
+
 // pathenemyfire.p bhv data
 const BehaviorScript bhvMotosProjectile[] = { // e_enemyfire ('bhvUnusedParticleSpawn' in the decomp)
     BEGIN(OBJ_LIST_GENACTOR),
@@ -1429,6 +1440,18 @@ const BehaviorScript bhvCoinInsideBoo[] = { // e_obake_coin
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_coin_inside_boo_loop),
         ADD_INT(oAnimState, 1),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvBBHTiltingTrapPlatform[] = {
+    BEGIN(OBJ_LIST_SURFACE),
+    OR_INT(oFlags, (OBJ_FLAG_COMPUTE_ANGLE_TO_MARIO | OBJ_FLAG_COMPUTE_DIST_TO_MARIO | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    // LOAD_COLLISION_DATA(bbh_seg7_collision_tilt_floor_platform),
+    SET_HOME(),
+    SET_INT(oRoom, 2),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_bbh_tilting_trap_platform_loop),
+        CALL_NATIVE(load_object_collision_model),
     END_LOOP(),
 };
 
