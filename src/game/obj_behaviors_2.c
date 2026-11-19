@@ -219,5 +219,133 @@ static s32 oscillate_toward(s32 *value, f32 *vel, s32 target, f32 velCloseToZero
     return FALSE;
 }
 
+static void obj_act_knockback(UNUSED f32 baseScale) {
+    cur_obj_update_floor_and_walls();
+
+    if (o->header.gfx.animInfo.curAnim != NULL) {
+        cur_obj_extend_animation_if_at_end();
+    }
+
+    //! Dies immediately if above lava
+    if ((o->oMoveFlags
+         & (OBJ_MOVE_MASK_ON_GROUND | OBJ_MOVE_MASK_IN_WATER | OBJ_MOVE_HIT_WALL | OBJ_MOVE_ABOVE_LAVA))
+        || (o->oAction == OBJ_ACT_VERTICAL_KNOCKBACK && o->oTimer >= 9)) {
+        obj_die_if_health_non_positive();
+    }
+
+    cur_obj_move_standard(-78);
+}
+
+static s32 obj_resolve_object_collisions(s32 *targetYaw) {
+    struct Object *otherObject;
+    f32 dx;
+    f32 dz;
+    s16 angle;
+    f32 radius;
+    f32 otherRadius;
+    f32 relativeRadius;
+    f32 newCenterX;
+    f32 newCenterZ;
+
+    if (o->numCollidedObjs != 0) {
+        otherObject = o->collidedObjs[0];
+        if (otherObject != gMarioObject) {
+            //! If one object moves after collisions are detected and this code
+            //  runs, the objects can move toward each other (transport cloning)
+
+            dx = otherObject->oPosX - o->oPosX;
+            dz = otherObject->oPosZ - o->oPosZ;
+            angle = atan2s(dx, dz); //! This should be atan2s(dz, dx)
+
+            radius = o->hitboxRadius;
+            otherRadius = otherObject->hitboxRadius;
+            relativeRadius = radius / (radius + otherRadius);
+
+            newCenterX = o->oPosX + dx * relativeRadius;
+            newCenterZ = o->oPosZ + dz * relativeRadius;
+
+            o->oPosX = newCenterX - radius * coss(angle);
+            o->oPosZ = newCenterZ - radius * sins(angle);
+
+            otherObject->oPosX = newCenterX + otherRadius * coss(angle);
+            otherObject->oPosZ = newCenterZ + otherRadius * sins(angle);
+
+            if (targetYaw != NULL && abs_angle_diff(o->oMoveAngleYaw, angle) < 0x4000) {
+                // Bounce off object (or it would, if the above atan2s bug
+                // were fixed)
+                *targetYaw = (s16)(angle - o->oMoveAngleYaw + angle + 0x8000);
+                return TRUE;
+            }
+        }
+    }
+
+    return FALSE;
+}
+
+static s32 obj_resolve_collisions_and_turn(s16 targetYaw, s16 turnSpeed) {
+    obj_resolve_object_collisions(NULL);
+
+    if (cur_obj_rotate_yaw_toward(targetYaw, turnSpeed)) {
+        return FALSE;
+    } else {
+        return TRUE;
+    }
+}
+
+static s32 obj_bounce_off_walls_edges_objects(s32 *targetYaw) {
+    if (o->oMoveFlags & OBJ_MOVE_HIT_WALL) {
+        *targetYaw = cur_obj_reflect_move_angle_off_wall();
+    } else if (o->oMoveFlags & OBJ_MOVE_HIT_EDGE) {
+        *targetYaw = (s16)(o->oMoveAngleYaw + 0x8000);
+    } else if (!obj_resolve_object_collisions(targetYaw)) {
+        return FALSE;
+    }
+
+    return TRUE;
+}
+
+static void obj_act_squished(f32 baseScale) {
+    f32 targetScaleY = baseScale * 0.3f;
+
+    cur_obj_update_floor_and_walls();
+
+    if (o->header.gfx.animInfo.curAnim != NULL) {
+        cur_obj_extend_animation_if_at_end();
+    }
+
+    if (approach_f32_ptr(&o->header.gfx.scale[1], targetScaleY, baseScale * 0.14f)) {
+        o->header.gfx.scale[0] = o->header.gfx.scale[2] = baseScale * 2.0f - o->header.gfx.scale[1];
+
+        if (o->oTimer > 15) {
+            obj_die_if_health_non_positive();
+        }
+    }
+
+    o->oForwardVel = 0.0f;
+    cur_obj_move_standard(-78);
+}
+
+static s32 obj_update_standard_actions(f32 scale) {
+    if (o->oAction < 100) {
+        return TRUE;
+    } else {
+        cur_obj_become_intangible();
+
+        switch (o->oAction) {
+            case OBJ_ACT_HORIZONTAL_KNOCKBACK:
+            case OBJ_ACT_VERTICAL_KNOCKBACK:
+                obj_act_knockback(scale);
+                break;
+
+            case OBJ_ACT_SQUISHED:
+                obj_act_squished(scale);
+                break;
+        }
+
+        return FALSE;
+    }
+}
+
 #include "behaviors/triplet_butterfly.inc.c" // pathfly.c
 #include "behaviors/seesaw_platform.inc.c"
+#include "behaviors/goomba.inc.c"

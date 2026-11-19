@@ -51,6 +51,8 @@ extern const BehaviorScript bhvTumblingBridgePlatform[];
 extern const BehaviorScript bhvTumblingBridge[];
 extern const BehaviorScript bhvBBHTumblingBridge[];
 extern const BehaviorScript bhvLLLTumblingBridge[];
+extern const BehaviorScript bhvGoomba[];
+extern const BehaviorScript bhvGoombaTripletSpawner[];
 extern const BehaviorScript bhvSeesawPlatform[];
 extern const BehaviorScript bhvMotosProjectile[];
 extern const BehaviorScript bhvBetaMovingFlamesSpawn[];

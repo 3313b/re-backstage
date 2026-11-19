@@ -336,6 +336,17 @@
     #define HAUNTED_BOOKSHELF_ACT_IDLE   0
     #define HAUNTED_BOOKSHELF_ACT_RECEDE 1
 
+/* Goomba */
+    /* oAction */
+    #define GOOMBA_ACT_WALK           0
+    #define GOOMBA_ACT_ATTACKED_MARIO 1
+    #define GOOMBA_ACT_JUMP           2
+
+/* Goomba Triplet Spawner */
+    /* oAction */
+    #define GOOMBA_TRIPLET_SPAWNER_ACT_UNLOADED 0
+    #define GOOMBA_TRIPLET_SPAWNER_ACT_LOADED   1
+
 /* Piranha Plant */
     /* oAction */
     #define PIRANHA_PLANT_ACT_IDLE            0

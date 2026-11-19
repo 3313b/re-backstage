@@ -490,7 +490,7 @@
 // find me
 //#define MODEL_KOOPA_SHELL                 0xBE        // koopa_shell_geo
 //#define MODEL_KOOPA_WITHOUT_SHELL         0xBF        // koopa_without_shell_geo
-// #define MODEL_GOOMBA                        0xC0        // goomba_geo
+#define MODEL_GOOMBA                        0xC0        // goomba_geo
 //#define MODEL_SEAWEED                     0xC1        // seaweed_geo
 //#define MODEL_AMP                         0xC2        // dAmpGeo
 //#define MODEL_BOBOMB_BUDDY                0xC3        // bobomb_buddy_geo

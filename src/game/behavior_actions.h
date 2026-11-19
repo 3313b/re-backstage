@@ -126,7 +126,10 @@ void bhv_volcano_flames_loop(void);
 void bhv_lll_rotating_hexagonal_ring_loop(void);
 void bhv_lll_sinking_rectangular_platform_loop(void);
 void bhv_lll_sinking_square_platforms_loop(void);
-// TODO: find behavior name for seesaw
+// TODO: find behavior name for seesaw and goomba
+void bhv_goomba_init(void);
+void bhv_goomba_update(void);
+void bhv_goomba_triplet_spawner_update(void);
 void bhv_seesaw_platform_init(void);
 void bhv_seesaw_platform_update(void);
 void bhv_platform_normals_init(void);

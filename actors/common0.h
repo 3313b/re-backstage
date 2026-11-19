@@ -28,13 +28,29 @@ extern Gfx RCP_carry_boy_carry3[];
 extern Gfx RCP_carry_boy_carry4[];
 extern AnimePtr carryboy_anime[];
 
-// koopa_shell
-extern Hierarchy RCP_HmsRedNoko[];
-extern Hierarchy RCP_HmsGreenNoko[];
+// goomba
+extern const GeoLayout goomba_geo[];
+extern const Gfx goomba_seg8_dl_0801B2E8[];
+extern const Gfx goomba_seg8_dl_0801B560[];
+extern const Gfx goomba_seg8_dl_0801B5A0[];
+extern const Gfx goomba_seg8_dl_0801B5C8[];
+extern const Gfx goomba_seg8_dl_0801B5F0[];
+extern const Gfx goomba_seg8_dl_0801B658[];
+extern const Gfx goomba_seg8_dl_0801B690[];
+extern const Gfx goomba_seg8_dl_0801CE20[];
+extern const Gfx goomba_seg8_dl_0801CF78[];
+extern const Gfx goomba_seg8_dl_0801D0D0[];
+extern const Gfx goomba_seg8_dl_0801D360[];
+extern const Gfx goomba_seg8_dl_0801D760[];
+extern const struct Animation *const goomba_seg8_anims_0801DA4C[];
 
 // test_platform
 extern const GeoLayout test_platform_geo[];
 extern const Gfx unknown_seg8_dl_08026260[];
 extern const Collision unknown_seg8_collision_080262F8[];
+
+// koopa_shell
+extern Hierarchy RCP_HmsRedNoko[];
+extern Hierarchy RCP_HmsGreenNoko[];
 
 #endif

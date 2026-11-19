@@ -319,6 +319,15 @@
 /* Flamethrower */
 #define /*0x110*/ oFlameThowerUnk110 OBJECT_FIELD_S32(0x22)
 
+/* Goomba */
+#define /*0x0F4*/ oGoombaSize                OBJECT_FIELD_S32(0x1B)
+#define /*0x0F8*/ oGoombaScale               OBJECT_FIELD_F32(0x1C)
+#define /*0x0FC*/ oGoombaWalkTimer           OBJECT_FIELD_S32(0x1D)
+#define /*0x100*/ oGoombaTargetYaw           OBJECT_FIELD_S32(0x1E)
+#define /*0x104*/ oGoombaBlinkTimer          OBJECT_FIELD_S32(0x1F)
+#define /*0x108*/ oGoombaTurningAwayFromWall OBJECT_FIELD_S32(0x20)
+#define /*0x10C*/ oGoombaRelativeSpeed       OBJECT_FIELD_F32(0x21)
+
 /* Hoot */
 #define /*0x0F4*/ oHootAvailability     OBJECT_FIELD_S32(0x1B)
 #define /*0x110*/ oHootMarioReleaseTime OBJECT_FIELD_S32(0x22)
