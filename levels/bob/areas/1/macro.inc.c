@@ -15,6 +15,5 @@ const MacroObject battle_field_macro[] = {
     MACRO_OBJECT(/*preset*/ macro_bobomb,                    /*yaw*/   0, /*pos*/  6888,  2002, -5608),
     MACRO_OBJECT(/*preset*/ macro_bobomb,                    /*yaw*/   0, /*pos*/  4596,  4272, -5090),
     MACRO_OBJECT(/*preset*/ macro_bobomb,                    /*yaw*/   0, /*pos*/  1016,  1179, -2272), 
-    MACRO_OBJECT(/*preset*/ macro_yellow_coin_1,               /*yaw*/   0, /*pos*/  -208,  4740,   408),
     MACRO_OBJECT_END(),
 };

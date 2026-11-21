@@ -12,6 +12,26 @@ static struct ObjectHitbox sBobombHitbox = {
     /* hurtboxHeight:     */ 0,
 };
 
+// Respawn functions originally from corkbox.inc.c but makes more sense to move here as its 
+// the only other object that uses it
+void bhv_respawner_loop(void) {
+    if (!is_point_within_radius_of_mario(o->oPosX, o->oPosY, o->oPosZ, o->oRespawnerMinSpawnDist)) {
+        struct Object *spawnedObject = spawn_object(o, o->oRespawnerModelToRespawn,
+                                                    o->oRespawnerBehaviorToRespawn);
+        spawnedObject->oBhvParams = o->oBhvParams;
+        o->activeFlags = ACTIVE_FLAG_DEACTIVATED;
+    }
+}
+
+void create_respawner(s32 model, const BehaviorScript *behToSpawn, s32 minSpawnDist) {
+    struct Object *respawner = spawn_object_abs_with_rot(o, 0, MODEL_NONE, bhvRespawner, o->oHomeX,
+                                                         o->oHomeY, o->oHomeZ, 0, 0, 0);
+    respawner->oBhvParams = o->oBhvParams;
+    respawner->oRespawnerModelToRespawn = model;
+    respawner->oRespawnerMinSpawnDist = minSpawnDist;
+    respawner->oRespawnerBehaviorToRespawn = behToSpawn;
+}
+
 void bhv_bobomb_init(void) {
     o->oGravity = 2.5f;
     o->oFriction = 0.8f;
@@ -38,6 +58,7 @@ void bobomb_act_explode(void) {
         explosion->oGraphYOffset += 50.0f;
 		explosion->oBhvParams = o->oBhvParams;
         bobomb_spawn_coin();
+        create_respawner(MODEL_BLACK_BOBOMB, bhvBobomb, 3000);
         o->activeFlags = ACTIVE_FLAG_DEACTIVATED;
     }
 }
@@ -125,8 +146,15 @@ void generic_bobomb_free_loop(void) {
             bobomb_act_explode();
             break;
 
+        case BOBOMB_ACT_LAVA_DEATH:
+            if (obj_lava_death() == TRUE) {
+                create_respawner(MODEL_BLACK_BOBOMB, bhvBobomb, 3000);
+            }
+            break;
+
         case BOBOMB_ACT_DEATH_PLANE_DEATH:
             o->activeFlags = ACTIVE_FLAG_DEACTIVATED;
+            create_respawner(MODEL_BLACK_BOBOMB, bhvBobomb, 3000);
             break;
     }
 
@@ -147,8 +175,15 @@ void stationary_bobomb_free_loop(void) {
             bobomb_act_explode();
             break;
 
+        case BOBOMB_ACT_LAVA_DEATH:
+            if (obj_lava_death() == TRUE) {
+                create_respawner(MODEL_BLACK_BOBOMB, bhvBobomb, 3000);
+            }
+            break;
+
         case BOBOMB_ACT_DEATH_PLANE_DEATH:
             o->activeFlags = ACTIVE_FLAG_DEACTIVATED;
+            create_respawner(MODEL_BLACK_BOBOMB, bhvBobomb, 3000);
             break;
     }
 

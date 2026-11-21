@@ -374,6 +374,11 @@
 #define /*0x10C*/ oMrIScale  OBJECT_FIELD_F32(0x21)
 #define /*0x110*/ oMrIUnk110 OBJECT_FIELD_S32(0x22)
 
+/* Object Respawner */
+#define /*0x0F4*/ oRespawnerModelToRespawn    OBJECT_FIELD_S32(0x1B)
+#define /*0x0F8*/ oRespawnerMinSpawnDist      OBJECT_FIELD_F32(0x1C)
+#define /*0x0FC*/ oRespawnerBehaviorToRespawn OBJECT_FIELD_CVPTR(0x1D)
+
 /* Motos */
 #define oMotosHoldStatus OBJECT_FIELD_S32(0x00)
 

@@ -2331,6 +2331,14 @@ const BehaviorScript bhvBobombExplosionBubble3600[] = {
     RETURN(),
 };
 
+const BehaviorScript bhvRespawner[] = {
+    BEGIN(OBJ_LIST_DEFAULT),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_respawner_loop),
+    END_LOOP(),
+};
+
 // otos.s bhv data
 
 const BehaviorScript bhvSmallBully[] = { // e_otos

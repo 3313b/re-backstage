@@ -46,6 +46,7 @@ void bhv_bobomb_fuse_smoke_init(void);
 void bhv_bobomb_bully_death_smoke_init(void);
 void bhv_bobomb_explosion_bubble_init(void);
 void bhv_bobomb_explosion_bubble_loop(void);
+void bhv_respawner_loop(void);
 // otos.s
 void bhv_small_bully_init(void);
 void bhv_bully_loop(void);

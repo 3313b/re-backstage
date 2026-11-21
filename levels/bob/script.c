@@ -18,9 +18,8 @@
 
 static const LevelScript script_func_local_1 [] = {
     OBJECT(/*model*/ MODEL_BOB_SEESAW_PLATFORM,   /*pos*/ -2303,   717,  1024, /*angle*/ 0, 45, 0,   /*bhvParam*/ 0, /*bhv*/ bhvSeesawPlatform),
-    // OBJECT(/*model*/ MODEL_GOOMBA,   /*pos*/  3636,   768,  6069, /*angle*/ 0, 45, 0,   /*bhvParam*/ 0, /*bhv*/ bhvGoombaTripletSpawner),
-    OBJECT(/*model*/ MODEL_STAR,  /*pos*/     1550,  1200, 300, /*angle*/ 0, 0, 0, /*bhvParam*/ 0x01000000, /*bhv*/ bhvStar),
-    OBJECT(/*model*/ MODEL_STAR,  /*pos*/     -600,  4400, 600, /*angle*/ 0, 0, 0, /*bhvParam*/ 0x02000000, /*bhv*/ bhvStar),
+    OBJECT(/*model*/ MODEL_STAR,  /*pos*/     1550,  1200,   300, /*angle*/ 0, 0, 0, /*bhvParam*/ 0x01000000, /*bhv*/ bhvStar),
+    OBJECT(/*model*/ MODEL_STAR,  /*pos*/     2000,  4500, -4500, /*angle*/ 0, 0, 0, /*bhvParam*/ 0x02000000, /*bhv*/ bhvStar),
     RETURN(),
 };
 
