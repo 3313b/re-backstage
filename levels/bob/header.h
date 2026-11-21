@@ -19,6 +19,8 @@ extern const Gfx bob_seesaw_dl[];
 extern const Collision bob_collision[];
 extern const MacroObject battle_field_macro[];
 extern const Collision bob_seesaw_collision[];
+extern const Trajectory bob_seg7_metal_ball_path0[];
+extern const Trajectory bob_seg7_metal_ball_path1[];
 
 extern const struct MovtexQuadCollection bob_movtex_water[];
 extern struct AreaMapData battle_field_areamap;

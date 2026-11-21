@@ -22,7 +22,7 @@
 #include "levels/bob/areas/1/collision.inc.c"
 #include "levels/bob/areas/1/macro.inc.c"
 #include "levels/bob/seesaw_platform/collision.inc.c"
-
+#include "levels/bob/areas/1/trajectory.inc.c"
 
 // Water surface and areamap data
 #include "levels/bob/areas/1/movtext.inc.c"

@@ -768,5 +768,7 @@ UNUSED s8 debug_sequence_tracker(s16 debugInputSequence[]) { // ContCommand
 #include "behaviors/drawbridge.inc.c" // movebg.s
 #include "behaviors/bomp.inc.c" // movebg.s
 #include "behaviors/sliding_platform.inc.c" // movebg.s
+#include "behaviors/bobomb.inc.c" // TODO: find filename for this and below
+#include "behaviors/bowling_ball.inc.c"
 #include "behaviors/sound_birds.inc.c" // others.s
 #include "behaviors/sound_ambient.inc.c" // others.s

@@ -104,6 +104,19 @@
 #define OBJ_ACT_VERTICAL_KNOCKBACK   101
 #define OBJ_ACT_SQUISHED             102
 
+/* Bob-omb */
+    /* oBhvParams2ndByte */
+    #define BOBOMB_BP_STYPE_GENERIC    0
+    #define BOBOMB_BP_STYPE_STATIONARY 1
+
+    /* oAction */
+    #define BOBOMB_ACT_PATROL            0
+    #define BOBOMB_ACT_LAUNCHED          1
+    #define BOBOMB_ACT_CHASE_MARIO       2
+    #define BOBOMB_ACT_EXPLODE           3
+    #define BOBOMB_ACT_LAVA_DEATH        100
+    #define BOBOMB_ACT_DEATH_PLANE_DEATH 101
+
 /* Slider Coin */
     /* oAction */
     #define SLD_COIN_ACT_STILL  0
@@ -297,6 +310,25 @@
     #define FAKE_MONEYBAG_COIN_ACT_IDLE      0
     #define FAKE_MONEYBAG_COIN_ACT_TRANSFORM 1
 
+/* Bowling Ball */
+    /* oAction */
+    #define BBALL_ACT_INITIALIZE 0
+    #define BBALL_ACT_ROLL       1
+
+/* Bowling Ball + Bowling Ball Spawner (All variants) */
+    /* oBhvParams2ndByte */
+    #define BBALL_BP_STYPE_BOB_UPPER 0
+    #define BBALL_BP_STYPE_TTM       1
+    #define BBALL_BP_STYPE_BOB_LOWER 2
+    #define BBALL_BP_STYPE_THI_LARGE 3
+    #define BBALL_BP_STYPE_THI_SMALL 4
+
+/* Bowling Ball (Free) */
+    /* oAction */
+    #define FREE_BBALL_ACT_IDLE  0
+    #define FREE_BBALL_ACT_ROLL  1
+    #define FREE_BBALL_ACT_RESET 2
+
 /* Beta Chest Lid */
     /* oAction */
     #define BETA_CHEST_ACT_IDLE_CLOSED 0
@@ -346,6 +378,28 @@
     /* oAction */
     #define GOOMBA_TRIPLET_SPAWNER_ACT_UNLOADED 0
     #define GOOMBA_TRIPLET_SPAWNER_ACT_LOADED   1
+
+/* Chain Chomp */
+    /* oAction */
+    #define CHAIN_CHOMP_ACT_UNINITIALIZED 0
+    #define CHAIN_CHOMP_ACT_MOVE          1
+    #define CHAIN_CHOMP_ACT_UNLOAD_CHAIN  2
+
+    /* oSubAction */
+    #define CHAIN_CHOMP_SUB_ACT_TURN  0
+    #define CHAIN_CHOMP_SUB_ACT_LUNGE 1
+
+    /* oChainChompReleaseStatus */
+    #define CHAIN_CHOMP_NOT_RELEASED              0
+    #define CHAIN_CHOMP_RELEASED_TRIGGER_CUTSCENE 1
+    #define CHAIN_CHOMP_RELEASED_LUNGE_AROUND     2
+    #define CHAIN_CHOMP_RELEASED_BREAK_GATE       3
+    #define CHAIN_CHOMP_RELEASED_JUMP_AWAY        4
+    #define CHAIN_CHOMP_RELEASED_END_CUTSCENE     5
+
+/* Chain Chomp Chain Part */
+    /* oBhvParams2ndByte */
+    #define CHAIN_CHOMP_CHAIN_PART_BP_PIVOT 0
 
 /* Piranha Plant */
     /* oAction */

@@ -26,7 +26,7 @@ static struct MacroPreset sMacroObjectPresets[] = {
     /* macro_empty_52                    */ { bhvYellowCoin, MODEL_YELLOW_COIN, 0 },
     /* macro_empty_80                    */ { bhvYellowCoin, MODEL_YELLOW_COIN, 0 },
     /* macro_bullet_bill_cannon          */ { bhvBulletBill, MODEL_BULLET_BILL, 0 }, // unused
-    /* macro_empty_83                    */ { bhvYellowCoin, MODEL_YELLOW_COIN, 0 },
+    /* macro_bobomb                      */ { bhvBobomb, MODEL_BLACK_BOBOMB, 0},
     /* macro_thwomp                      */ { bhvThwomp, MODEL_THWOMP, 0 }, // unused
     /* macro_butterfly_triplet           */ { bhvTripletButterfly, MODEL_BUTTERFLY, 0 },
     /* macro_empty_90                    */ { bhvYellowCoin, MODEL_YELLOW_COIN, 0 },
@@ -151,7 +151,7 @@ static struct MacroPreset sMacroObjectPresets[] = {
     /* macro_empty_250                   */ { bhvYellowCoin, MODEL_YELLOW_COIN, 0 },
     /* macro_piranha_plant               */ { bhvPiranhaPlant, MODEL_PIRANHA_PLANT, 0 }, // unused
     /* macro_whomp                       */ { bhvSmallWhomp, MODEL_WHOMP, 0 },
-    /* macro_empty_264                   */ { bhvYellowCoin, MODEL_YELLOW_COIN, 0 },
+    /* macro_chain_chomp                 */ { bhvChainChomp, MODEL_CHAIN_CHOMP, 0 },
     /* macro_empty_265                   */ { bhvYellowCoin, MODEL_YELLOW_COIN, 0 },
     /* macro_empty_266                   */ { bhvYellowCoin, MODEL_YELLOW_COIN, 0 },
     /* macro_empty_267                   */ { bhvYellowCoin, MODEL_YELLOW_COIN, 0 },

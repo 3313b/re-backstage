@@ -27,6 +27,9 @@ UNUSED static const u64 binid_5 = 5;
 #include "goomba/anims/table.inc.c"
 UNUSED static const u64 binid_13 = 13;
 
+#include "bobomb/bom.sou"
+UNUSED static const u64 binid_14 = 14;
+
 #include "test_platform/model.inc.c"
 #include "test_platform/collision.inc.c"
 UNUSED static const u64 binid_17 = 17;

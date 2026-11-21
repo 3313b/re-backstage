@@ -7,3 +7,6 @@
 
 #include "common1.h"
 #include "group14.h"
+
+#include "wanwano/wanwan.hms"
+#include "chain_ball/geo.inc.c"

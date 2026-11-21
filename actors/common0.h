@@ -28,6 +28,18 @@ extern Gfx RCP_carry_boy_carry3[];
 extern Gfx RCP_carry_boy_carry4[];
 extern AnimePtr carryboy_anime[];
 
+// bobomb
+extern const Hierarchy RCP_HmsEnemybom_basedata[];
+extern const Gfx RCP_bom_basedata0[];
+extern const Gfx RCP_bom_basedata1[];
+extern const Gfx RCP_bom_basedata2[];
+extern const Gfx gfx_bom[];
+extern AnimePtr bom_anime[];
+
+// bowling_ball
+extern const GeoLayout bowling_ball_geo[];
+extern const GeoLayout bowling_ball_track_geo[];
+
 // goomba
 extern const GeoLayout goomba_geo[];
 extern const Gfx goomba_seg8_dl_0801B2E8[];

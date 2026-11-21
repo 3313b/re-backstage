@@ -14,3 +14,9 @@ UNUSED static const u64 binid_3 = 3;
 #include "whomp/wallman.sou"
 #include "whomp/wallman.flk"
 UNUSED static const u64 binid_4 = 4;
+
+#include "wanwano/wanwan.sou"
+UNUSED static const u64 binid_5 = 5;
+
+#include "chain_ball/model.inc.c"
+UNUSED static const u64 binid_6 = 6;

@@ -219,23 +219,6 @@ static s32 oscillate_toward(s32 *value, f32 *vel, s32 target, f32 velCloseToZero
     return FALSE;
 }
 
-static void obj_act_knockback(UNUSED f32 baseScale) {
-    cur_obj_update_floor_and_walls();
-
-    if (o->header.gfx.animInfo.curAnim != NULL) {
-        cur_obj_extend_animation_if_at_end();
-    }
-
-    //! Dies immediately if above lava
-    if ((o->oMoveFlags
-         & (OBJ_MOVE_MASK_ON_GROUND | OBJ_MOVE_MASK_IN_WATER | OBJ_MOVE_HIT_WALL | OBJ_MOVE_ABOVE_LAVA))
-        || (o->oAction == OBJ_ACT_VERTICAL_KNOCKBACK && o->oTimer >= 9)) {
-        obj_die_if_health_non_positive();
-    }
-
-    cur_obj_move_standard(-78);
-}
-
 static s32 obj_resolve_object_collisions(s32 *targetYaw) {
     struct Object *otherObject;
     f32 dx;
@@ -304,6 +287,23 @@ static s32 obj_bounce_off_walls_edges_objects(s32 *targetYaw) {
     return TRUE;
 }
 
+static void obj_act_knockback(UNUSED f32 baseScale) {
+    cur_obj_update_floor_and_walls();
+
+    if (o->header.gfx.animInfo.curAnim != NULL) {
+        cur_obj_extend_animation_if_at_end();
+    }
+
+    //! Dies immediately if above lava
+    if ((o->oMoveFlags
+         & (OBJ_MOVE_MASK_ON_GROUND | OBJ_MOVE_MASK_IN_WATER | OBJ_MOVE_HIT_WALL | OBJ_MOVE_ABOVE_LAVA))
+        || (o->oAction == OBJ_ACT_VERTICAL_KNOCKBACK && o->oTimer >= 9)) {
+        obj_die_if_health_non_positive();
+    }
+
+    cur_obj_move_standard(-78);
+}
+
 static void obj_act_squished(f32 baseScale) {
     f32 targetScaleY = baseScale * 0.3f;
 
@@ -346,6 +346,90 @@ static s32 obj_update_standard_actions(f32 scale) {
     }
 }
 
+static void obj_set_squished_action(void) {
+    cur_obj_play_sound_2(SOUND_OBJ_STOMPED);
+    o->oAction = OBJ_ACT_SQUISHED;
+}
+
+static void obj_set_knockback_action(s32 attackType) {
+    switch (attackType) {
+        case ATTACK_KICK_OR_TRIP:
+        case ATTACK_FAST_ATTACK:
+            o->oAction = OBJ_ACT_VERTICAL_KNOCKBACK;
+            o->oForwardVel = 20.0f;
+            o->oVelY = 50.0f;
+            break;
+
+        default:
+            o->oAction = OBJ_ACT_HORIZONTAL_KNOCKBACK;
+            o->oForwardVel = 50.0f;
+            o->oVelY = 30.0f;
+            break;
+    }
+
+    o->oFlags &= ~OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW;
+    o->oMoveAngleYaw = obj_angle_to_object(gMarioObject, o);
+}
+
+static s32 obj_handle_attacks(struct ObjectHitbox *hitbox, s32 attackedMarioAction,
+                              u8 *attackHandlers) {
+    s32 attackType;
+
+    obj_set_hitbox(o, hitbox);
+
+    //! Die immediately if above lava
+    if (obj_die_if_above_lava_and_health_non_positive()) {
+        return 1;
+    } else if (o->oInteractStatus & INT_STATUS_INTERACTED) {
+        if (o->oInteractStatus & INT_STATUS_ATTACKED_MARIO) {
+            if (o->oAction != attackedMarioAction) {
+                o->oAction = attackedMarioAction;
+                o->oTimer = 0;
+            }
+        } else {
+            attackType = o->oInteractStatus & INT_STATUS_ATTACK_MASK;
+
+            switch (attackHandlers[attackType - 1]) {
+                case ATTACK_HANDLER_NOP:
+                    break;
+
+                case ATTACK_HANDLER_DIE_IF_HEALTH_NON_POSITIVE:
+                    obj_die_if_health_non_positive();
+                    break;
+
+                case ATTACK_HANDLER_KNOCKBACK:
+                    obj_set_knockback_action(attackType);
+                    break;
+
+                case ATTACK_HANDLER_SQUISHED:
+                    obj_set_squished_action();
+                    break;
+            }
+
+            o->oInteractStatus = 0;
+            return attackType;
+        }
+    }
+
+    o->oInteractStatus = 0;
+    return 0;
+}
+
+static s16 obj_get_pitch_from_vel(void) {
+    return -atan2s(o->oForwardVel, o->oVelY);
+}
+
+static s32 obj_face_pitch_approach(s16 targetPitch, s16 deltaPitch) {
+    o->oFaceAnglePitch = approach_s16_symmetric(o->oFaceAnglePitch, targetPitch, deltaPitch);
+
+    if ((s16) o->oFaceAnglePitch == targetPitch) {
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
 #include "behaviors/triplet_butterfly.inc.c" // pathfly.c
-#include "behaviors/seesaw_platform.inc.c"
 #include "behaviors/goomba.inc.c"
+#include "behaviors/chain_chomp.inc.c" // TODO: chain_chomp_sub_act_lunge documentation
+#include "behaviors/seesaw_platform.inc.c"

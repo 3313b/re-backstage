@@ -389,9 +389,10 @@
 
 // group 14
 #define MODEL_PIRANHA_PLANT               0x64        // RCP_HmsEnemypakun_angry
+#define MODEL_METALLIC_BALL               0x65        // metallic_ball_geo
+#define MODEL_CHAIN_CHOMP                 0x66        // RCP_HmsEnemywanwan
 #define MODEL_WHOMP                       0x67        // RCP_HmsEnemywallman
 //#define MODEL_KOOPA_WITH_SHELL            0x68        // koopa_with_shell_geo
-//#define MODEL_METALLIC_BALL               0x65        // metallic_ball_geo
 #define MODEL_BUB                         0x6B        // cheep_cheep_geo
 //#define MODEL_KOOPA_FLAG                  0x6A        // koopa_flag_geo
 //#define MODEL_WOODEN_POST                 0x6B        // wooden_post_geo
@@ -478,7 +479,7 @@
 #define MODEL_WF_TUMBLING_BRIDGE          0xB2        // wf_geo_000AC8
 #define MODEL_BOWSER_BOMB                 0xB3        // bowser_bomb_geo
 #define MODEL_WATER_MINE                  0xB3        // water_mine_geo
-//#define MODEL_BOWLING_BALL                0xB4        // bowling_ball_geo
+#define MODEL_BOWLING_BALL                0xB4        // bowling_ball_geo
 #define MODEL_TRAMPOLINE                  0xB5        // springboard_top_geo (unused)
 #define MODEL_TRAMPOLINE_CENTER           0xB6        // springboard_spring_geo (unused)
 #define MODEL_TRAMPOLINE_BASE             0xB7        // springboard_bottom_geo (unused)
@@ -486,7 +487,7 @@
 #define MODEL_FISH                        0xB9        // fish_geo - fish without shadow, used
 #define MODEL_FISH_SHADOW                 0xBA        // fish_shadow_geo - fish with shadow, unused
 #define MODEL_BUTTERFLY                   0xBB        // butterfly_geo
-//#define MODEL_BLACK_BOBOMB                0xBC        // black_bobomb_geo
+#define MODEL_BLACK_BOBOMB                0xBC        // black_bobomb_geo
 // find me
 //#define MODEL_KOOPA_SHELL                 0xBE        // koopa_shell_geo
 //#define MODEL_KOOPA_WITHOUT_SHELL         0xBF        // koopa_without_shell_geo

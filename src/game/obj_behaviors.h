@@ -19,6 +19,16 @@ void bhv_jet_stream_loop(void);
 // bird.s
 void bhv_hoot_init(void);
 void bhv_hoot_loop(void);
+// TODO: find behavior name for these
+void bhv_bob_pit_bowling_ball_init(void);
+void bhv_bob_pit_bowling_ball_loop(void);
+void bhv_free_bowling_ball_init(void);
+void bhv_free_bowling_ball_loop(void);
+void bhv_bowling_ball_init(void);
+void bhv_bowling_ball_loop(void);
+void bhv_generic_bowling_ball_spawner_init(void);
+void bhv_generic_bowling_ball_spawner_loop(void);
+void bhv_thi_bowling_ball_spawner_loop(void);
 // kame.s
 void bhv_beta_holdable_object_init(void); /* unused */
 void bhv_beta_holdable_object_loop(void); /* unused */
@@ -29,6 +39,10 @@ void bhv_object_water_wave_init(void);
 void bhv_object_water_wave_loop(void);
 void bhv_explosion_init(void);
 void bhv_explosion_loop(void);
+// TODO: move bobomb bhv functions to own section
+void bhv_bobomb_init(void);
+void bhv_bobomb_loop(void);
+void bhv_bobomb_fuse_smoke_init(void);
 void bhv_bobomb_bully_death_smoke_init(void);
 void bhv_bobomb_explosion_bubble_init(void);
 void bhv_bobomb_explosion_bubble_loop(void);

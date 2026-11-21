@@ -52,7 +52,6 @@ static u8 sGoombaAttackHandlers[][6] = {
         /* ATTACK_FROM_BELOW:            */ ATTACK_HANDLER_KNOCKBACK,
     },
 };
-
 /**
  * Update function for goomba triplet spawner.
  */
@@ -259,7 +258,8 @@ void bhv_goomba_update(void) {
                 break;
         }
 
-        if (obj_check_attacks(&sGoombaHitbox, GOOMBA_ACT_ATTACKED_MARIO)) {
+        if (obj_handle_attacks(&sGoombaHitbox, GOOMBA_ACT_ATTACKED_MARIO,
+                               sGoombaAttackHandlers[o->oGoombaSize & 1])) {
             mark_goomba_as_dead();
         }
 

@@ -1,5 +1,6 @@
 // 0x0701104C - 0x070113BE
 const MacroObject battle_field_macro[] = {
+    MACRO_OBJECT(/*preset*/ macro_chain_chomp,               /*yaw*/   0, /*pos*/   260,   735,  1920),
     MACRO_OBJECT_WITH_BHV_PARAM(/*preset*/ macro_cannon_open,             /*yaw*/   0, /*pos*/ -5018,  1332, -3533, /*bhvParam*/ 0x00),
     MACRO_OBJECT_WITH_BHV_PARAM(/*preset*/ macro_cannon_open,             /*yaw*/   0, /*pos*/  6349,  2080, -7066, /*bhvParam*/ 0xC0),
     MACRO_OBJECT_WITH_BHV_PARAM(/*preset*/ macro_cannon_open,             /*yaw*/   0, /*pos*/  5376,  1537,  4610, /*bhvParam*/ 0x40),
@@ -7,5 +8,13 @@ const MacroObject battle_field_macro[] = {
     MACRO_OBJECT(/*preset*/ macro_goomba_triplet_spawner,    /*yaw*/   0, /*pos*/  3636,   768,  6069),
     MACRO_OBJECT(/*preset*/ macro_goomba_triplet_spawner,    /*yaw*/   0, /*pos*/  6060,   877,  2000),
     MACRO_OBJECT(/*preset*/ macro_goomba_triplet_spawner,    /*yaw*/   0, /*pos*/ -6050,   768,  1250),
+    MACRO_OBJECT(/*preset*/ macro_bobomb,                    /*yaw*/   0, /*pos*/ -3688,   885, -3813),
+    MACRO_OBJECT(/*preset*/ macro_bobomb,                    /*yaw*/   0, /*pos*/ -4629,  1024, -1772),
+    MACRO_OBJECT(/*preset*/ macro_bobomb,                    /*yaw*/   0, /*pos*/ -3480,   891, -2120),
+    MACRO_OBJECT(/*preset*/ macro_bobomb,                    /*yaw*/   0, /*pos*/ -3800,  1024,  -460),
+    MACRO_OBJECT(/*preset*/ macro_bobomb,                    /*yaw*/   0, /*pos*/  6888,  2002, -5608),
+    MACRO_OBJECT(/*preset*/ macro_bobomb,                    /*yaw*/   0, /*pos*/  4596,  4272, -5090),
+    MACRO_OBJECT(/*preset*/ macro_bobomb,                    /*yaw*/   0, /*pos*/  1016,  1179, -2272), 
+    MACRO_OBJECT(/*preset*/ macro_yellow_coin_1,               /*yaw*/   0, /*pos*/  -208,  4740,   408),
     MACRO_OBJECT_END(),
 };

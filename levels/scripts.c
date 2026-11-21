@@ -140,11 +140,12 @@ static const LevelScript script_exec_ ## folder [] = { \
 
 const LevelScript script_func_global_1[] = {
     LOAD_MODEL_FROM_GEO(MODEL_SLIDE_EXIT_PODIUM,       RCP_HmsEndoor), // The slide exit podium was seemingly a general object based on its inclusion in 'shape/keep/OLD/'
+    LOAD_MODEL_FROM_GEO(MODEL_GOOMBA,                  goomba_geo),
     LOAD_MODEL_FROM_GEO(MODEL_GREEN_KOOPA_SHELL,       RCP_HmsGreenNoko),
     LOAD_MODEL_FROM_GEO(MODEL_RED_KOOPA_SHELL,         RCP_HmsRedNoko),
     LOAD_MODEL_FROM_GEO(MODEL_CANNON_BARREL,           RCP_HmsCannonBody),
     LOAD_MODEL_FROM_GEO(MODEL_CANNON_BASE,             RCP_HmsCannonBase),
-    LOAD_MODEL_FROM_GEO(MODEL_GOOMBA,                  goomba_geo),
+    LOAD_MODEL_FROM_GEO(MODEL_BOWLING_BALL,            bowling_ball_geo),
     LOAD_MODEL_FROM_GEO(MODEL_CHUCKYA,                 RCP_HmsEnemycarryboy),
     RETURN(),
 };
@@ -164,6 +165,11 @@ const LevelScript script_func_global_3[] = {
     LOAD_MODEL_FROM_GEO(MODEL_BULLY_BOSS,              RCP_HmsEnemyBigotos_basedata),
     LOAD_MODEL_FROM_GEO(MODEL_MOTOS,                   RCP_HmsEnemymotos_basedata_A),
     RETURN(),
+};
+
+const LevelScript script_func_global_4[] = {
+        LOAD_MODEL_FROM_GEO(MODEL_BLACK_BOBOMB,          RCP_HmsEnemybom_basedata),
+        RETURN(),
 };
 
 const LevelScript script_func_global_5[] = {
@@ -216,6 +222,8 @@ const LevelScript script_func_global_14[] = {
 const LevelScript script_func_global_15[] = {
     LOAD_MODEL_FROM_GEO(MODEL_PIRANHA_PLANT,           RCP_HmsEnemypakun_angry),
     LOAD_MODEL_FROM_GEO(MODEL_WHOMP,                   RCP_HmsEnemywallman),
+    LOAD_MODEL_FROM_GEO(MODEL_CHAIN_CHOMP,             RCP_HmsEnemywanwan),
+    LOAD_MODEL_FROM_GEO(MODEL_METALLIC_BALL,           metallic_ball_geo),
     RETURN(),
 };
 

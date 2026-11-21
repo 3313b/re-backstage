@@ -52,7 +52,7 @@ SZP_OBJ_FILES := $(SZP_FILES:.szp=.szp.o)
 # --------------------------------------
 
 # Actor Directories
-KOOPA_DIRS       := koopa_flag poundable_pole koopa piranha_plant whomp chain_ball chain_chomp
+KOOPA_DIRS       := koopa_flag poundable_pole koopa piranha_plant whomp chain_ball wanwano
 CAPSWITCH_DIRS   := capswitch springboard
 CHILLYCHIEF_DIRS := chillychief moneybag
 BULLY_DIRS       := bully blargg motos

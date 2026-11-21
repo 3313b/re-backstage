@@ -13,9 +13,9 @@ const MacroObject thi_seg7_area_1_macro_objs[] = {
     MACRO_OBJECT               (/*preset*/ macro_yellow_coin_1,         /*yaw*/   0, /*pos*/  7188, -1535, -3000),
     MACRO_OBJECT               (/*preset*/ macro_yellow_coin_1,         /*yaw*/   0, /*pos*/  7188, -1535, -3400),
     MACRO_OBJECT               (/*preset*/ macro_yellow_coin_1,         /*yaw*/   0, /*pos*/  7188, -1535, -3800),
-    // MACRO_OBJECT(/*preset*/ macro_goomba_triplet_spawner,               /*yaw*/   0, /*pos*/  6428, -2559,  4857),
-    // MACRO_OBJECT(/*preset*/ macro_goomba_triplet_spawner,               /*yaw*/   0, /*pos*/  6600, -1535, -5726),
-    // MACRO_OBJECT(/*preset*/ macro_goomba_triplet_spawner,               /*yaw*/   0, /*pos*/ -6260, -2969,  6630),
-    // MACRO_OBJECT(/*preset*/ macro_goomba_triplet_spawner,               /*yaw*/   0, /*pos*/ -3588,  -511,  3088),
+    MACRO_OBJECT(/*preset*/ macro_goomba_triplet_spawner,               /*yaw*/   0, /*pos*/  6428, -2559,  4857),
+    MACRO_OBJECT(/*preset*/ macro_goomba_triplet_spawner,               /*yaw*/   0, /*pos*/  6600, -1535, -5726),
+    MACRO_OBJECT(/*preset*/ macro_goomba_triplet_spawner,               /*yaw*/   0, /*pos*/ -6260, -2969,  6630),
+    MACRO_OBJECT(/*preset*/ macro_goomba_triplet_spawner,               /*yaw*/   0, /*pos*/ -3588,  -511,  3088),
     MACRO_OBJECT_END(),
 };

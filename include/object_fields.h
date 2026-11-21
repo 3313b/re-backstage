@@ -168,6 +168,11 @@
 /* Bird Chirp Chirp */
 #define /*0x0F4*/ oBirdChirpChirpUnkF4 OBJECT_FIELD_S32(0x1B)
 
+/* Bob-omb */
+#define /*0x0F4*/ oBobombBlinkTimer OBJECT_FIELD_S32(0x1B)
+#define /*0x0F8*/ oBobombFuseLit    OBJECT_FIELD_S32(0x1C)
+#define /*0x0FC*/ oBobombFuseTimer  OBJECT_FIELD_S32(0x1D)
+
 /* Bob-omb Explosion Bubble */
 #define /*0x0FC*/ oBobombExpBubGfxScaleFacX OBJECT_FIELD_S32(0x1D)
 #define /*0x100*/ oBobombExpBubGfxScaleFacY OBJECT_FIELD_S32(0x1E)
@@ -197,6 +202,15 @@
 
 /* Bouncing FireBall */
 #define /*0x0F4*/ oBouncingFireBallUnkF4 OBJECT_FIELD_S32(0x1B)
+
+/* Bowling Ball */
+#define /*0x0F4*/ oBowlingBallTargetYaw OBJECT_FIELD_S32(0x1B)
+// 0x1D-0x21 reserved for pathing
+
+/* Bowling Ball Spawner (Generic) */
+#define /*0x0F4*/ oBBallSpawnerMaxSpawnDist OBJECT_FIELD_F32(0x1B)
+#define /*0x0F8*/ oBBallSpawnerSpawnOdds    OBJECT_FIELD_F32(0x1C)
+#define /*0x0FC*/ oBBallSpawnerPeriodMinus1 OBJECT_FIELD_S32(0x1D)
 
 /* Bowser */
 #define /*0x088*/ oBowserCamAct          OBJECT_FIELD_S32(0x00)
@@ -251,6 +265,18 @@
 #define /*0x0F4*/ oCannonUnkF4  OBJECT_FIELD_S32(0x1B)
 #define /*0x0F8*/ oCannonUnkF8  OBJECT_FIELD_S32(0x1C)
 #define /*0x10C*/ oCannonUnk10C OBJECT_FIELD_S32(0x21)
+
+/* Chain Chomp */
+#define /*0x0F4*/ oChainChompSegments                     OBJECT_FIELD_CHAIN_SEGMENT(0x1B)
+#define /*0x0F8*/ oChainChompMaxDistFromPivotPerChainPart OBJECT_FIELD_F32(0x1C)
+#define /*0x0FC*/ oChainChompMaxDistBetweenChainParts     OBJECT_FIELD_F32(0x1D)
+#define /*0x100*/ oChainChompDistToPivot                  OBJECT_FIELD_F32(0x1E)
+#define /*0x104*/ oChainChompUnk104                       OBJECT_FIELD_F32(0x1F)
+#define /*0x108*/ oChainChompRestrictedByChain            OBJECT_FIELD_S32(0x20)
+#define /*0x10C*/ oChainChompTargetPitch                  OBJECT_FIELD_S32(0x21)
+#define /*0x110*/ oChainChompNumLunges                    OBJECT_FIELD_S32(0x22)
+#define /*0x1AC*/ oChainChompReleaseStatus                OBJECT_FIELD_S32(0x49)
+#define /*0x1B0*/ oChainChompHitGate                      OBJECT_FIELD_S32(0x4A)
 
 /* Cheep Cheep */
 #define /*0x0F4*/ oCheepCheepUnkF4  OBJECT_FIELD_F32(0x1B)

@@ -845,6 +845,34 @@ const BehaviorScript bhvGoombaTripletSpawner[] = {
     END_LOOP(),
 };
 
+const BehaviorScript bhvChainChomp[] = {
+    BEGIN(OBJ_LIST_GENACTOR),
+    OR_INT(oFlags, (OBJ_FLAG_COMPUTE_ANGLE_TO_MARIO | OBJ_FLAG_ACTIVE_FROM_AFAR | OBJ_FLAG_COMPUTE_DIST_TO_MARIO | OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    DROP_TO_FLOOR(),
+    LOAD_ANIMATIONS(oAnimations, wanwan_anime),
+    ANIMATE(0),
+    SET_OBJ_PHYSICS(/*Wall hitbox radius*/ 0, /*Gravity*/ -400, /*Bounciness*/ -50, /*Drag strength*/ 0, /*Friction*/ 1000, /*Buoyancy*/ 200, /*Unused*/ 0, 0),
+    HIDE(),
+    SET_HOME(),
+    SET_FLOAT(oGraphYOffset, 240),
+    SCALE(/*Unused*/ 0, /*Field*/ 200),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_chain_chomp_update),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvChainChompChainPart[] = {
+    BEGIN(OBJ_LIST_GENACTOR),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    BILLBOARD(),
+    SET_OBJ_PHYSICS(/*Wall hitbox radius*/ 0, /*Gravity*/ -400, /*Bounciness*/ -50, /*Drag strength*/ 1000, /*Friction*/ 1000, /*Buoyancy*/ 200, /*Unused*/ 0, 0),
+    SET_FLOAT(oGraphYOffset, 40),
+    SCALE(/*Unused*/ 0, /*Field*/ 200),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_chain_chomp_chain_part_update),
+    END_LOOP(),
+};
+
 const BehaviorScript bhvSeesawPlatform[] = {
     BEGIN(OBJ_LIST_SURFACE),
     OR_INT(oFlags, (OBJ_FLAG_COMPUTE_ANGLE_TO_MARIO | OBJ_FLAG_COMPUTE_DIST_TO_MARIO | OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
@@ -2229,6 +2257,33 @@ const BehaviorScript bhvExplosion[] = {
     END_LOOP(),
 };
 
+const BehaviorScript bhvBobomb[] = {
+    BEGIN(OBJ_LIST_DESTRUCTIVE),
+    OR_INT(oFlags, (OBJ_FLAG_PERSISTENT_RESPAWN | OBJ_FLAG_COMPUTE_ANGLE_TO_MARIO | OBJ_FLAG_HOLDABLE | OBJ_FLAG_COMPUTE_DIST_TO_MARIO | OBJ_FLAG_SET_FACE_YAW_TO_MOVE_YAW | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
+    LOAD_ANIMATIONS(oAnimations, bom_anime),
+    DROP_TO_FLOOR(),
+    ANIMATE(0),
+    SET_INT(oIntangibleTimer, 0),
+    SET_HOME(),
+    CALL_NATIVE(bhv_bobomb_init),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_bobomb_loop),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvBobombFuseSmoke[] = {
+    BEGIN(OBJ_LIST_DEFAULT),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    BILLBOARD(),
+    SET_INT(oAnimState, -1),
+    CALL_NATIVE(bhv_bobomb_fuse_smoke_init),
+    DELAY(1),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_dust_smoke_loop),
+        ADD_INT(oAnimState, 1),
+    END_LOOP(),
+};
+
 const BehaviorScript bhvBobombBullyDeathSmoke[] = {
     BEGIN(OBJ_LIST_UNIMPORTANT),
     OR_INT(oFlags, (OBJ_FLAG_MOVE_Y_WITH_TERMINAL_VEL | OBJ_FLAG_MOVE_XZ_USING_FVEL | OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE)),
@@ -2459,6 +2514,67 @@ const BehaviorScript bhvWFSlidingPlatform[] = { // e_trans_bar
     BEGIN_LOOP(),
         CALL_NATIVE(bhv_wf_sliding_platform_loop),
         CALL_NATIVE(load_object_collision_model),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvPitBowlingBall[] = {
+    BEGIN(OBJ_LIST_GENACTOR),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    BILLBOARD(),
+    SET_FLOAT(oGraphYOffset, 130),
+    CALL_NATIVE(bhv_bob_pit_bowling_ball_init),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_bob_pit_bowling_ball_loop),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvFreeBowlingBall[] = {
+    BEGIN(OBJ_LIST_GENACTOR),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    BILLBOARD(),
+    SET_FLOAT(oGraphYOffset, 130),
+    CALL_NATIVE(bhv_free_bowling_ball_init),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_free_bowling_ball_loop),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvBowlingBall[] = {
+    BEGIN(OBJ_LIST_GENACTOR),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    BILLBOARD(),
+    SET_FLOAT(oGraphYOffset, 130),
+    CALL_NATIVE(bhv_bowling_ball_init),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_bowling_ball_loop),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvTTMBowlingBallSpawner[] = {
+    BEGIN(OBJ_LIST_GENACTOR),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    SET_INT(oBBallSpawnerPeriodMinus1, 63),
+    CALL_NATIVE(bhv_generic_bowling_ball_spawner_init),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_generic_bowling_ball_spawner_loop),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvBoBBowlingBallSpawner[] = {
+    BEGIN(OBJ_LIST_GENACTOR),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    SET_INT(oBBallSpawnerPeriodMinus1, 127),
+    CALL_NATIVE(bhv_generic_bowling_ball_spawner_init),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_generic_bowling_ball_spawner_loop),
+    END_LOOP(),
+};
+
+const BehaviorScript bhvTHIBowlingBallSpawner[] = {
+    BEGIN(OBJ_LIST_GENACTOR),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_thi_bowling_ball_spawner_loop),
     END_LOOP(),
 };
 
