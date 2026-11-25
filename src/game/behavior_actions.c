@@ -127,4 +127,5 @@ Gfx *geo_move_mario_part_from_parent(s32 run, UNUSED struct GraphNode *node, Mat
 #include "behaviors/blargg.inc.c" // pathunbaba.p (not in the final game)
 #include "behaviors/whomp.inc.c" // pathwallman.p
 #include "behaviors/water_splashes_and_waves.inc.c" // pathwater.p, pathwaterdive.p, pathwaterripple.p and pathwaterwave.p
+#include "behaviors/heave_ho.inc.c" // TODO: document heave ho behavior name from the leak
 // There's 'pathyellowball.p' here but it just has bhv data (bhvYellowBall)

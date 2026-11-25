@@ -127,21 +127,21 @@
 #define MODEL_THI_TINY_ISLAND_TOP                 0x37        // thi_geo_0005C8
 
 // ttc
-#define MODEL_TTC_ROTATING_CUBE                   0x36        // ttc_geo_000240
-#define MODEL_TTC_ROTATING_PRISM                  0x37        // ttc_geo_000258
-#define MODEL_TTC_PENDULUM                        0x38        // ttc_geo_000270
-#define MODEL_TTC_LARGE_TREADMILL                 0x39        // ttc_geo_000288
-#define MODEL_TTC_SMALL_TREADMILL                 0x3A        // ttc_geo_0002A8
-#define MODEL_TTC_PUSH_BLOCK                      0x3B        // ttc_geo_0002C8
-#define MODEL_TTC_ROTATING_HEXAGON                0x3C        // ttc_geo_0002E0
-#define MODEL_TTC_ROTATING_TRIANGLE               0x3D        // ttc_geo_0002F8
-#define MODEL_TTC_PIT_BLOCK                       0x3E        // ttc_geo_000310 - has 2 vertical stripes
-#define MODEL_TTC_PIT_BLOCK_UNUSED                0x3F        // ttc_geo_000328 - has 3 vertical stripes, unused
-#define MODEL_TTC_ELEVATOR_PLATFORM               0x40        // ttc_geo_000340
-#define MODEL_TTC_CLOCK_HAND                      0x41        // ttc_geo_000358
-#define MODEL_TTC_SPINNER                         0x42        // ttc_geo_000370
-#define MODEL_TTC_SMALL_GEAR                      0x43        // ttc_geo_000388
-#define MODEL_TTC_LARGE_GEAR                      0x44        // ttc_geo_0003A0
+#define MODEL_TTC_ROTATING_CUBE                   0x36        // ttc_rotating_cube_geo
+#define MODEL_TTC_ROTATING_PRISM                  0x37        // ttc_rotating_prism_geo
+#define MODEL_TTC_PENDULUM                        0x38        // ttc_pendulum_geo
+#define MODEL_TTC_LARGE_TREADMILL                 0x39        // ttc_large_treadmill_geo
+#define MODEL_TTC_SMALL_TREADMILL                 0x3A        // ttc_small_treadmill_geo
+#define MODEL_TTC_PUSH_BLOCK                      0x3B        // ttc_push_block_geo
+#define MODEL_TTC_ROTATING_HEXAGON                0x3C        // ttc_rotating_hexagon_geo
+#define MODEL_TTC_ROTATING_TRIANGLE               0x3D        // ttc_rotating_triangle_geo
+#define MODEL_TTC_PIT_BLOCK                       0x3E        // ttc_pit_block_geo - has 2 vertical stripes
+#define MODEL_TTC_PIT_BLOCK_UNUSED                0x3F        // ttc_pit_block_2_geo - has 3 vertical stripes, unused
+#define MODEL_TTC_ELEVATOR_PLATFORM               0x40        // ttc_elevator_platform_geo
+#define MODEL_TTC_CLOCK_HAND                      0x41        // ttc_clock_hand_geo
+#define MODEL_TTC_SPINNER                         0x42        // ttc_spinner_geo
+#define MODEL_TTC_SMALL_GEAR                      0x43        // ttc_small_gear_geo
+#define MODEL_TTC_LARGE_GEAR                      0x44        // ttc_large_gear_geo
 
 // rr
 #define MODEL_RR_SLIDING_PLATFORM                 0x36        // rr_geo_0008C0
@@ -302,7 +302,7 @@
 #define MODEL_HOOT                        0x56        // hoot_geo
 #define MODEL_HOOT_EGG                    0x57        // hoot_egg_geo
 #define MODEL_THWOMP                      0x58        // RCP_HmsDosun
-//#define MODEL_HEAVE_HO                    0x59        // heave_ho_geo
+#define MODEL_HEAVE_HO                    0x59        // heave_ho_geo
 
 // group 2
 #define MODEL_BLARGG                      0x54        // blargg_geo

@@ -156,6 +156,7 @@ const LevelScript script_func_global_2[] = {
     LOAD_MODEL_FROM_GEO(MODEL_HOOT,                    hoot_geo),
     LOAD_MODEL_FROM_GEO(MODEL_HOOT_EGG,                hoot_egg_geo),
     LOAD_MODEL_FROM_GEO(MODEL_THWOMP,                  RCP_HmsDosun),
+    LOAD_MODEL_FROM_GEO(MODEL_HEAVE_HO,                RCP_HmsEnemyomurobo),
     RETURN(),
 };
 

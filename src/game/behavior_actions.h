@@ -86,6 +86,9 @@ void bhv_beta_trampoline_spring_loop(void);
 // pathkey.p
 void bhv_key_inside_boo_loop(void);
 void bhv_small_key_loop(void);
+// TODO: document heave ho behavior name from the leak
+void bhv_heave_ho_loop(void);
+void bhv_heave_ho_throw_mario_loop(void);
 // pathkiller.p
 void bhv_bullet_bill_init(void);
 void bhv_bullet_bill_loop(void);
@@ -126,7 +129,7 @@ void bhv_volcano_flames_loop(void);
 void bhv_lll_rotating_hexagonal_ring_loop(void);
 void bhv_lll_sinking_rectangular_platform_loop(void);
 void bhv_lll_sinking_square_platforms_loop(void);
-// TODO: find behavior name for seesaw, goomba, and chain chomp
+// TODO: find behavior name for seesaw, goomba, chain , etc
 void bhv_goomba_init(void);
 void bhv_goomba_update(void);
 void bhv_goomba_triplet_spawner_update(void);
@@ -136,6 +139,23 @@ void bhv_seesaw_platform_init(void);
 void bhv_seesaw_platform_update(void);
 void bhv_platform_normals_init(void);
 void bhv_tilting_inverted_pyramid_loop(void);
+void bhv_ttc_rotating_solid_init(void);
+void bhv_ttc_rotating_solid_update(void);
+void bhv_ttc_pendulum_init(void);
+void bhv_ttc_pendulum_update(void);
+void bhv_ttc_treadmill_init(void);
+void bhv_ttc_treadmill_update(void);
+void bhv_ttc_moving_bar_init(void);
+void bhv_ttc_moving_bar_update(void);
+void bhv_ttc_cog_init(void);
+void bhv_ttc_cog_update(void);
+void bhv_ttc_pit_block_init(void);
+void bhv_ttc_pit_block_update(void);
+void bhv_ttc_elevator_init(void);
+void bhv_ttc_elevator_update(void);
+void bhv_ttc_2d_rotator_init(void);
+void bhv_ttc_2d_rotator_update(void);
+void bhv_ttc_spinner_update(void);
 // pathobake.p
 void bhv_courtyard_boo_triplet_init(void);
 void bhv_boo_loop(void);

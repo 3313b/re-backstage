@@ -13,3 +13,4 @@
 #include "hoot_egg/geo.inc.c"
 #include "thwomp/dosun.hms"
 #include "bullet_bill/geo.inc.c"
+#include "omurobo/omurobo.hms"

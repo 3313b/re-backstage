@@ -105,6 +105,7 @@ extern RoomData gDoorAdjacentRooms[60][2];
 extern s16 gMarioCurrentRoom;
 extern s16 D_8035FEE2; // area_coin
 extern s16 D_8035FEE4; // area_door
+extern s16 gTTCSpeedSetting;
 extern s16 gNumRoomedObjectsInMarioRoom;
 extern s16 gNumRoomedObjectsNotInMarioRoom;
 

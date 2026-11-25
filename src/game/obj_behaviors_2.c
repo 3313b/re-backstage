@@ -21,6 +21,7 @@
 #include "levels/ccm/header.h"
 #include "levels/lll/header.h"
 #include "levels/bob/header.h"
+#include "levels/ttc/header.h"
 #include "mario.h"
 #include "mario_actions_cutscene.h"
 #include "memory.h"
@@ -47,10 +48,45 @@
 extern f32 sObjSavedPosX;
 extern f32 sObjSavedPosY;
 extern f32 sObjSavedPosZ;
+extern struct Object *sMasterTreadmill;
+
+/**
+ * The treadmill that plays sounds and controls the others on random setting.
+ */
+struct Object *sMasterTreadmill;
 
 f32 sObjSavedPosX;
 f32 sObjSavedPosY;
 f32 sObjSavedPosZ;
+
+//! Although having no return value, this function
+//! must be u32 to match other functions on -O2.
+static BAD_RETURN(u32) obj_perform_position_op(s32 op) {
+    switch (op) {
+        case POS_OP_SAVE_POSITION:
+            sObjSavedPosX = o->oPosX;
+            sObjSavedPosY = o->oPosY;
+            sObjSavedPosZ = o->oPosZ;
+            break;
+
+        case POS_OP_COMPUTE_VELOCITY:
+            o->oVelX = o->oPosX - sObjSavedPosX;
+            o->oVelY = o->oPosY - sObjSavedPosY;
+            o->oVelZ = o->oPosZ - sObjSavedPosZ;
+            break;
+
+        case POS_OP_RESTORE_POSITION:
+            o->oPosX = sObjSavedPosX;
+            o->oPosY = sObjSavedPosY;
+            o->oPosZ = sObjSavedPosZ;
+            break;
+    }
+}
+
+static void obj_set_dist_from_home(f32 distFromHome) {
+    o->oPosX = o->oHomeX + distFromHome * coss(o->oMoveAngleYaw);
+    o->oPosZ = o->oHomeZ + distFromHome * sins(o->oMoveAngleYaw);
+}
 
 static void obj_compute_vel_from_move_pitch(f32 speed) {
     o->oForwardVel = speed * coss(o->oMoveAnglePitch);
@@ -81,6 +117,16 @@ static s32 obj_move_pitch_approach(s16 target, s16 delta) {
     return FALSE;
 }
 
+static s32 obj_face_yaw_approach(s16 targetYaw, s16 deltaYaw) {
+    o->oFaceAngleYaw = approach_s16_symmetric(o->oFaceAngleYaw, targetYaw, deltaYaw);
+
+    if ((s16) o->oFaceAngleYaw == targetYaw) {
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
 static s32 obj_face_roll_approach(s16 targetRoll, s16 deltaRoll) {
     o->oFaceAngleRoll = approach_s16_symmetric(o->oFaceAngleRoll, targetRoll, deltaRoll);
 
@@ -93,6 +139,10 @@ static s32 obj_face_roll_approach(s16 targetRoll, s16 deltaRoll) {
 
 static s16 random_linear_offset(s16 base, s16 range) {
     return base + (s16) (range * random_float());
+}
+
+static s16 random_mod_offset(s16 base, s16 step, s16 mod) {
+    return base + step * (random_u16() % mod);
 }
 
 static void obj_die_if_health_non_positive(void) {
@@ -433,3 +483,12 @@ static s32 obj_face_pitch_approach(s16 targetPitch, s16 deltaPitch) {
 #include "behaviors/goomba.inc.c"
 #include "behaviors/chain_chomp.inc.c" // TODO: chain_chomp_sub_act_lunge documentation
 #include "behaviors/seesaw_platform.inc.c"
+#include "behaviors/ttc_rotating_solid.inc.c"
+#include "behaviors/ttc_pendulum.inc.c"
+#include "behaviors/ttc_treadmill.inc.c"
+#include "behaviors/ttc_moving_bar.inc.c"
+#include "behaviors/ttc_cog.inc.c"
+#include "behaviors/ttc_pit_block.inc.c"
+#include "behaviors/ttc_elevator.inc.c"
+#include "behaviors/ttc_2d_rotator.inc.c"
+#include "behaviors/ttc_spinner.inc.c"

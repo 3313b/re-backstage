@@ -354,6 +354,10 @@
 #define /*0x108*/ oGoombaTurningAwayFromWall OBJECT_FIELD_S32(0x20)
 #define /*0x10C*/ oGoombaRelativeSpeed       OBJECT_FIELD_F32(0x21)
 
+/* Heave-Ho */
+#define /*0x088*/ oHeaveHoUnk88 OBJECT_FIELD_S32(0x00)
+#define /*0x0F4*/ oHeaveHoUnkF4 OBJECT_FIELD_F32(0x1B)
+
 /* Hoot */
 #define /*0x0F4*/ oHootAvailability     OBJECT_FIELD_S32(0x1B)
 #define /*0x110*/ oHootMarioReleaseTime OBJECT_FIELD_S32(0x22)
@@ -437,6 +441,61 @@
 #define /*0x0F8*/ oTiltingPyramidNormalY         OBJECT_FIELD_F32(0x1C)
 #define /*0x0FC*/ oTiltingPyramidNormalZ         OBJECT_FIELD_F32(0x1D)
 #define /*0x10C*/ oTiltingPyramidMarioOnPlatform OBJECT_FIELD_S32(0x21)
+
+/* TTC Rotating Solid */
+#define /*0x0F4*/ oTTCRotatingSolidNumTurns      OBJECT_FIELD_S32(0x1B)
+#define /*0x0F8*/ oTTCRotatingSolidNumSides      OBJECT_FIELD_S32(0x1C)
+#define /*0x0FC*/ oTTCRotatingSolidRotationDelay OBJECT_FIELD_S32(0x1D)
+#define /*0x100*/ oTTCRotatingSolidVelY          OBJECT_FIELD_F32(0x1E)
+#define /*0x104*/ oTTCRotatingSolidSoundTimer    OBJECT_FIELD_S32(0x1F)
+
+/* TTC Pendulum */
+#define /*0x0F4*/ oTTCPendulumAccelDir   OBJECT_FIELD_F32(0x1B)
+#define /*0x0F8*/ oTTCPendulumAngle      OBJECT_FIELD_F32(0x1C)
+#define /*0x0FC*/ oTTCPendulumAngleVel   OBJECT_FIELD_F32(0x1D)
+#define /*0x100*/ oTTCPendulumAngleAccel OBJECT_FIELD_F32(0x1E)
+#define /*0x104*/ oTTCPendulumDelay      OBJECT_FIELD_S32(0x1F)
+#define /*0x108*/ oTTCPendulumSoundTimer OBJECT_FIELD_S32(0x20)
+
+/* TTC Treadmill */
+#define /*0x0F4*/ oTTCTreadmillBigSurface      OBJECT_FIELD_S16P(0x1B)
+#define /*0x0F8*/ oTTCTreadmillSmallSurface    OBJECT_FIELD_S16P(0x1C)
+#define /*0x0FC*/ oTTCTreadmillSpeed           OBJECT_FIELD_F32(0x1D)
+#define /*0x100*/ oTTCTreadmillTargetSpeed     OBJECT_FIELD_F32(0x1E)
+#define /*0x104*/ oTTCTreadmillTimeUntilSwitch OBJECT_FIELD_S32(0x1F)
+
+/* TTC Moving Bar */
+#define /*0x0F4*/ oTTCMovingBarDelay        OBJECT_FIELD_S32(0x1B)
+#define /*0x0F8*/ oTTCMovingBarStoppedTimer OBJECT_FIELD_S32(0x1C)
+#define /*0x0FC*/ oTTCMovingBarOffset       OBJECT_FIELD_F32(0x1D)
+#define /*0x100*/ oTTCMovingBarSpeed        OBJECT_FIELD_F32(0x1E)
+#define /*0x104*/ oTTCMovingBarStartOffset  OBJECT_FIELD_F32(0x1F)
+
+/* TTC Cog */
+#define /*0x0F4*/ oTTCCogDir       OBJECT_FIELD_F32(0x1B)
+#define /*0x0F8*/ oTTCCogSpeed     OBJECT_FIELD_F32(0x1C)
+#define /*0x0FC*/ oTTCCogTargetVel OBJECT_FIELD_F32(0x1D)
+
+/* TTC Pit Block */
+#define /*0x0F4*/ oTTCPitBlockPeakY    OBJECT_FIELD_F32(0x1B)
+#define /*0x0F8*/ oTTCPitBlockDir      OBJECT_FIELD_S32(0x1C)
+#define /*0x0FC*/ oTTCPitBlockWaitTime OBJECT_FIELD_S32(0x1D)
+
+/* TTC Elevator */
+#define /*0x0F4*/ oTTCElevatorDir      OBJECT_FIELD_F32(0x1B)
+#define /*0x0F8*/ oTTCElevatorPeakY    OBJECT_FIELD_F32(0x1C)
+#define /*0x0FC*/ oTTCElevatorMoveTime OBJECT_FIELD_S32(0x1D)
+
+/* TTC 2D Rotator */
+#define /*0x0F4*/ oTTC2DRotatorMinTimeUntilNextTurn OBJECT_FIELD_S32(0x1B)
+#define /*0x0F8*/ oTTC2DRotatorTargetYaw            OBJECT_FIELD_S32(0x1C)
+#define /*0x0FC*/ oTTC2DRotatorIncrement            OBJECT_FIELD_S32(0x1D)
+#define /*0x104*/ oTTC2DRotatorRandomDirTimer       OBJECT_FIELD_S32(0x1F)
+#define /*0x108*/ oTTC2DRotatorSpeed                OBJECT_FIELD_S32(0x20)
+
+/* TTC Spinner */
+#define /*0x0F4*/ oTTCSpinnerDir     OBJECT_FIELD_S32(0x1B)
+#define /*0x0F8*/ oTTCChangeDirTimer OBJECT_FIELD_S32(0x1C)
 
 /* Beta Trampoline */
 #define /*0x110*/ oBetaTrampolineMarioOnTrampoline OBJECT_FIELD_S32(0x22)

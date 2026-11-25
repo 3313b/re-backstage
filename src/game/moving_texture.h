@@ -12,7 +12,8 @@
 /// Ids for textures used for moving textures
 enum MovtexRectTextureId {
     TEXTURE_WATER,
-    TEXTURE_CYAN_WATER
+    TEXTURE_CYAN_WATER,
+    TEX_YELLOW_TRI_TTC
 };
 
 /**
@@ -34,6 +35,7 @@ struct MovtexQuadCollection {
 #define MOVTEX_AREA_WF               (0x24 << 8)
 #define MOVTEX_AREA_CASTLE_COURTYARD (0x26 << 8)
 #define MOVTEX_AREA_THI              (0x13 << 8)
+#define MOVTEX_AREA_TTC              (0x14 << 8)
 #define MOVTEX_AREA_BOB              (0x15 << 8)
 
 // Quad collections
@@ -49,12 +51,15 @@ struct MovtexQuadCollection {
 // Non-colored, unique movtex meshes (drawn in level geo)
 #define MOVTEX_CASTLE_WATERFALL           (1 | MOVTEX_AREA_CASTLE_GROUNDS)
 
+// Shared movtex meshes (drawn in object geo)
+#define MOVTEX_TREADMILL_BIG         (0 | MOVTEX_AREA_TTC)
+#define MOVTEX_TREADMILL_SMALL       (1 | MOVTEX_AREA_TTC)
+
 Gfx *geo_movtex_draw_water_regions(s32 callContext, struct GraphNode *node, UNUSED Mat4 mtx);
 Gfx *geo_movtex_draw_nocolor(s32 callContext, struct GraphNode *node, UNUSED Mat4 mtx);
 Gfx *geo_movtex_draw_colored(s32 callContext, struct GraphNode *node, UNUSED Mat4 mtx);
 Gfx *geo_movtex_draw_colored_no_update(s32 callContext, struct GraphNode *node, UNUSED Mat4 mtx);
 Gfx *geo_movtex_draw_colored_2_no_update(s32 callContext, struct GraphNode *node, UNUSED Mat4 mtx);
 Gfx *geo_movtex_update_horizontal(s32 callContext, struct GraphNode *node, UNUSED Mat4 mtx);
-Gfx *geo_movtex_draw_colored_no_update(s32 callContext, struct GraphNode *node, UNUSED Mat4 mtx);
 
 #endif // MOVING_TEXTURE_H

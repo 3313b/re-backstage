@@ -81,10 +81,11 @@ Gfx big_world_3_dl_mesh_tri_0[] = {
 };
 
 Gfx big_world_3_dl_mesh[] = {
+	gsSPClearGeometryMode(G_CULL_BACK),
 	gsSPDisplayList(mat_big_world_LongFenceMaterial),
 	gsSPDisplayList(big_world_3_dl_mesh_tri_0),
 	gsDPPipeSync(),
-	gsSPSetGeometryMode(G_LIGHTING),
+	gsSPSetGeometryMode(G_LIGHTING | G_CULL_BACK),
 	gsSPClearGeometryMode(G_TEXTURE_GEN),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 0),

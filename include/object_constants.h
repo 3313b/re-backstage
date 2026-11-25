@@ -104,6 +104,12 @@
 #define OBJ_ACT_VERTICAL_KNOCKBACK   101
 #define OBJ_ACT_SQUISHED             102
 
+/* gTTCSpeedSetting */
+#define TTC_SPEED_SLOW    0
+#define TTC_SPEED_FAST    1
+#define TTC_SPEED_RANDOM  2
+#define TTC_SPEED_STOPPED 3
+
 /* Bob-omb */
     /* oBhvParams2ndByte */
     #define BOBOMB_BP_STYPE_GENERIC    0
@@ -430,6 +436,42 @@
     /* Animations */
     #define PENGUIN_ANIM_WALK 0
     #define PENGUIN_ANIM_IDLE 3
+
+/* TTC Rotating Solid */
+    /* oBhvParams2ndByte */
+    #define TTC_ROTATING_SOLID_BP_CUBE             0
+    #define TTC_ROTATING_SOLID_BP_TRIANGULAR_PRISM 1
+
+/* TTC Treadmill */
+    /* oBhvParams2ndByte */
+    #define TTC_TREADMILL_BP_FLAG_LARGE (0 << 0)
+    #define TTC_TREADMILL_BP_FLAG_SMALL (1 << 0)
+    #define TTC_TREADMILL_BP_FLAG_MASK  (TTC_TREADMILL_BP_FLAG_LARGE | TTC_TREADMILL_BP_FLAG_SMALL)
+    #define TTC_TREADMILL_BP_LARGE_1    ((0 << 1) | TTC_TREADMILL_BP_FLAG_LARGE)
+    #define TTC_TREADMILL_BP_SMALL_1    ((0 << 1) | TTC_TREADMILL_BP_FLAG_SMALL)
+    #define TTC_TREADMILL_BP_LARGE_2    ((1 << 1) | TTC_TREADMILL_BP_FLAG_LARGE)
+    #define TTC_TREADMILL_BP_SMALL_2    ((1 << 1) | TTC_TREADMILL_BP_FLAG_SMALL)
+
+/* TTC Moving Bar */
+    /* oAction */
+    #define TTC_MOVING_BAR_ACT_WAIT      0
+    #define TTC_MOVING_BAR_ACT_PULL_BACK 1
+    #define TTC_MOVING_BAR_ACT_EXTEND    2
+    #define TTC_MOVING_BAR_ACT_RETRACT   3
+
+/* TTC Cog */
+    /* oBhvParams2ndByte */
+    #define TTC_COG_BP_SHAPE_HEXAGON  (0 << 1)
+    #define TTC_COG_BP_SHAPE_TRIANGLE (1 << 1)
+    #define TTC_COG_BP_SHAPE_MASK     (TTC_COG_BP_SHAPE_HEXAGON | TTC_COG_BP_SHAPE_TRIANGLE)
+    #define TTC_COG_BP_DIR_CCW        (0 << 0) // TODO: Check these
+    #define TTC_COG_BP_DIR_CW         (1 << 0)
+    #define TTC_COG_BP_DIR_MASK       (TTC_COG_BP_DIR_CCW | TTC_COG_BP_DIR_CW)
+
+/* TTC 2D Rotator */
+    /* oBhvParams2ndByte */
+    #define TTC_2D_ROTATOR_BP_HAND   0
+    #define TTC_2D_ROTATOR_BP_2D_COG 1
 
 /* Triplet Butterfly */
     /* oAction */

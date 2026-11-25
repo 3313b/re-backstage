@@ -327,7 +327,6 @@ static const Gfx mat_big_world_WoodMediumGreyMaterial[] = {
 };
 
 static const Gfx mat_big_world_LongFenceMaterial[] = {
-	gsSPClearGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
     gsDPSetCombineMode(G_CC_DECALRGBA, G_CC_DECALRGBA),
 	gsSPTexture(65535, 65535, 0, 0, 1),
@@ -337,7 +336,6 @@ static const Gfx mat_big_world_LongFenceMaterial[] = {
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 124),
 	gsSPSetLights1(big_world_lights_white),
-	gsSPSetGeometryMode(G_CULL_BACK),
 	gsSPEndDisplayList(),
 };
 

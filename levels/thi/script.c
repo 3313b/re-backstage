@@ -25,6 +25,7 @@ static const LevelScript script_func_local_4[] = {
     OBJECT(/*model*/ MODEL_PIRANHA_PLANT,     /*pos*/  -6481, -2047, -5998, /*angle*/ 0, 0, 0, /*bhvParam*/ 0x00000000, /*bhv*/ bhvPiranhaPlant),
     OBJECT(/*model*/ MODEL_PIRANHA_PLANT,     /*pos*/  -5577, -2047, -4961, /*angle*/ 0, 0, 0, /*bhvParam*/ 0x00000000, /*bhv*/ bhvPiranhaPlant),
     OBJECT(/*model*/ MODEL_PIRANHA_PLANT,     /*pos*/  -6865, -2047, -4568, /*angle*/ 0, 0, 0, /*bhvParam*/ 0x00000000, /*bhv*/ bhvPiranhaPlant),
+    OBJECT          (/*model*/ MODEL_NONE,             /*pos*/ -4413,   204, -2140, /*angle*/ 0,   0, 0, /*bhvParam*/ BPARAM2(BBALL_BP_STYPE_THI_LARGE), /*bhv*/ bhvTHIBowlingBallSpawner),
     RETURN(),
 };
 

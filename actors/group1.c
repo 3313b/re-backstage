@@ -24,3 +24,6 @@ UNUSED static const u64 binid_3 = 3;
 
 #include "bullet_bill/model.inc.c"
 UNUSED static const u64 binid_4 = 4;
+
+#include "omurobo/omurobo.sou"
+UNUSED static const u64 binid_5 = 5;

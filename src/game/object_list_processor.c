@@ -150,6 +150,7 @@ RoomData gDoorAdjacentRooms[60][2];
 s16 gMarioCurrentRoom;
 s16 D_8035FEE2; // area_coin
 s16 D_8035FEE4; // area_door
+s16 gTTCSpeedSetting;
 s16 gNumRoomedObjectsInMarioRoom;
 s16 gNumRoomedObjectsNotInMarioRoom;
 

@@ -3,8 +3,12 @@ static const Lights1 bob_lights = gdSPDefLights1(
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
 static const Lights1 bob_lights_2 = gdSPDefLights1(
-	0x14, 0x14, 0x14,
+	0x19, 0x19, 0x19,
 	0x64, 0x64, 0x64, 0x28, 0x28, 0x28);
+
+static const Lights1 bob_lights_3 = gdSPDefLights1(
+	0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x28, 0x28, 0x28);
 
 static const Gfx mat_battle_field_BrightDirtRockMaterial[] = {
 	gsDPPipeSync(),
@@ -112,9 +116,8 @@ static const Gfx mat_battle_field_RoughGreenRockMaterial[] = {
 
 static const Gfx mat_battle_field_SolidBlackMaterial[] = {
 	gsDPPipeSync(),
-	gsDPSetCombineLERP(0, 0, 0, 0, 0, 0, 0, ENVIRONMENT, 0, 0, 0, 0, 0, 0, 0, ENVIRONMENT),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
-	gsDPSetTileSize(0, 0, 0, 124, 124),
+    gsDPSetCombineMode(G_CC_SHADE, G_CC_SHADE),
+	gsSPSetLights1(bob_lights_3),
 	gsSPEndDisplayList(),
 };
 
