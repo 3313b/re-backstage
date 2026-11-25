@@ -648,10 +648,9 @@ static void geo_process_shadow(struct GraphNodeShadow *node) {
     if (gCurGraphNodeCamera != NULL && gCurGraphNodeObject != NULL) {
         //! The 1995 B-Roll builds had a bug with held objects where they would render below
         //! Mario's position instead of the held object's, which looked odd, especially with Bowser.
-        //! The Shoshinkai demo temporarily "fixed" this by not rendering the held object shadows.
         if (gCurGraphNodeHeldObject != NULL) {
             vec3f_copy(shadowPos, gCurGraphNodeObject->pos);
-            shadowScale = 0.0f; // Scale held object shadows to 0 to not appear below Mario
+            shadowScale = node->shadowScale;
         } else {
             vec3f_copy(shadowPos, gCurGraphNodeObject->pos);
             shadowScale = node->shadowScale * gCurGraphNodeObject->scale[0];

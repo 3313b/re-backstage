@@ -147,6 +147,12 @@ static s16 random_mod_offset(s16 base, s16 step, s16 mod) {
 
 static void obj_die_if_health_non_positive(void) {
     if (o->oHealth <= 0) {
+        if (o->oDeathSound == 0) {
+            cur_obj_play_sound_2(SOUND_OBJ_DEFAULT_DEATH);
+        } else if (o->oDeathSound > 0) {
+            cur_obj_play_sound_2(o->oDeathSound);
+        }
+
         // This doesn't do anything
         obj_spawn_loot_yellow_coins(o, o->oNumLootCoins, 20.0f);
 
@@ -267,6 +273,21 @@ static s32 oscillate_toward(s32 *value, f32 *vel, s32 target, f32 velCloseToZero
     }
 
     return FALSE;
+}
+
+static void obj_update_blinking(s32 *blinkTimer, s16 baseCycleLength, s16 cycleLengthRange,
+                                s16 blinkLength) {
+    if (*blinkTimer != 0) {
+        (*blinkTimer)--;
+    } else {
+        *blinkTimer = random_linear_offset(baseCycleLength, cycleLengthRange);
+    }
+
+    if (*blinkTimer > blinkLength) {
+        o->oAnimState = 0;
+    } else {
+        o->oAnimState = 1;
+    }
 }
 
 static s32 obj_resolve_object_collisions(s32 *targetYaw) {
@@ -397,7 +418,6 @@ static s32 obj_update_standard_actions(f32 scale) {
 }
 
 static void obj_set_squished_action(void) {
-    cur_obj_play_sound_2(SOUND_OBJ_STOMPED);
     o->oAction = OBJ_ACT_SQUISHED;
 }
 

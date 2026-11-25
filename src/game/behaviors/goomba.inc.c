@@ -31,15 +31,6 @@ struct GoombaProperties {
 };
 
 /**
- * Properties for regular, huge, and tiny goombas.
- */
-static struct GoombaProperties sGoombaProperties[] = {
-    { 1.5f, SOUND_OBJ_ENEMY_DEATH_HIGH, 4000, 1 },
-    { 3.5f, SOUND_OBJ_ENEMY_DEATH_LOW, 4000, 2 },
-    { 0.5f, SOUND_OBJ_ENEMY_DEATH_HIGH, 1500, 0 },
-};
-
-/**
  * Attack handlers for goombas.
  */
 static u8 sGoombaAttackHandlers[][6] = {
@@ -98,7 +89,7 @@ void bhv_goomba_init(void) {
     o->oGoombaSize = 0;
 
     o->oGoombaScale = 1.5f;
-    o->oDeathSound = SOUND_OBJ_ENEMY_DEATH_HIGH;
+    o->oDeathSound = SOUND_OBJ_DYING_ENEMY1;
 
     obj_set_hitbox(o, &sGoombaHitbox);
 
@@ -237,7 +228,7 @@ void bhv_goomba_update(void) {
         }
 
         cur_obj_scale(o->oGoombaScale);
-        // obj_update_blinking(&o->oGoombaBlinkTimer, 30, 50, 5);
+        obj_update_blinking(&o->oGoombaBlinkTimer, 30, 50, 5);
         cur_obj_update_floor_and_walls();
 
         if ((animSpeed = o->oForwardVel / o->oGoombaScale * 0.4f) < 1.0f) {
